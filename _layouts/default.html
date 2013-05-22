@@ -1,46 +1,68 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="css/syntax.css">
+	<title>{{ page.title }}</title>
+	<meta name="description" content="{{ page.title }}">
+	<!--<meta name="viewport" content="width=device-width">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/main.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/style.css">
 
-    </head>
-    <body>
+	<!-- All JavaScript at the bottom, except this Modernizr build.
+	Modernizr enables HTML5 elements & feature detects for optimal performance.
+	Create your own custom Modernizr build: www.modernizr.com/download/ -->
+	<script src="/js/libs/modernizr-2.5.3.min.js"></script>
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
-     
-                {{ content }}
+</head>
+<body class="page-{{ page.id }}">
+	<!-- Do something nasty for IE6 & 7 users. -->
+	<!--[if lt IE 8]>
+		<p>This site doesn't work in IE7 and IE6. Sorry.</p>
+	<![endif]-->
+	<!--[if (lt IE 9) & (!IEMobile)]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+  
+	<div class="container">
 
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
+		<header>
+			<h1 class="heading1">Header</h1>
+			<ul class="main-nav">
+				<li><a href="#" title="One">One</a></li>
+				<li><a href="#" title="Two">Two</a></li>
+				<li><a href="#" title="Three">Three</a></li>
+				<li><a href="#" title="Four">Four</a></li>
+				<li><a href="#" title="Five">Five</a></li>
+			</ul>
+		</header>
 
-    </body>
+	</div>
+	
+
+	<div class="container" role="main">
+
+		{{ content }}
+
+	</div>
+
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/libs/jquery-2.0.0.min.js"><\/script>')</script>
+
+	<!-- scripts concatenated and minified -->
+	<script src="/js/plugins.js"></script>
+	<script src="/js/script.js"></script>
+	<!-- end scripts -->
+
+	{% include analytics.html %}
+
+</body>
 </html>
