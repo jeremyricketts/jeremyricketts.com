@@ -1,12 +1,22 @@
 @import "compass"; // Gem. Compass 0.12.2 (06/24/2012)
-@import "normalize"; // File. normalize.css v1.1.0, modified to remove IE67 hacks.
-@import "variables"; // File. Custom.
-@import "utilities"; // File. Utility classes from HTML5BP, custom utility classes, and SASS mixins.
 @import "animation"; // Gem. https://github.com/ericam/compass-animation For Compass v <= 0.12
+@import "animation/animate"; // Gem. Required by animation.
+@import "normalize"; // File. normalize.css v1.1.0, modified to remove IE67 hacks.
+@import "utilities"; // File. Utility classes from HTML5BP, custom utility classes, and SASS mixins.
 @import "media-queries"; // File. Don't really use this a lot. But there if you need it.
 @import "grid"; // File. It's just a mixin. See file for documentation.
 @import "font-awesome"; // File. Font Awesome 3.0.2
 
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+$white:#fff;
+$black:#000;
+$textColor: #222;
+$beige:#eaeae1;
+$dark-text:darken($beige, 70%);
+$light-text:darken($beige, 50%);
+$link-color:#ec6961;
 
 /* ==========================================================================
 	Misc Fixes
