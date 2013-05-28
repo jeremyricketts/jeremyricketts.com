@@ -25,6 +25,18 @@ $(function() {
 
 	$('.js-video').fitVids();
 
+	$('.modal-img').magnificPopup({
+		type:'image',
+		callbacks: {
+			open: function() {
+				$('header').hide();
+			},
+			close: function() {
+				$('header').show();
+			}
+		}
+	});
+
 });
 
 
