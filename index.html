@@ -18,23 +18,30 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type="text/css">
 
 	<style type="text/css">
 		* { box-sizing:border-box; margin:0; padding:0;}
-		body { font-family:'Open Sans',sans-serif; font-weight:300; background:#f7f7f7; color: #979890;}
+		body { font-family:'Open Sans',sans-serif; font-weight:300; color: #4d5669;
+			background:#b7bec3 url(/img/bg.jpg) no-repeat center bottom fixed; 
+			background-size:100% auto;
+		}
+		body.nobg { 
+			background:#b7bec3; 
+		}
 		h1 { font-size:34px; text-align:center; font-weight:700; margin-bottom:1em; }
-		a { color:#429f44; text-decoration:none;}
-		a:hover { text-decoration:underline;}
+		a { color:#788294; text-decoration:none; text-shadow: 0 1px 1px rgba(255,255,255,.5); transition:color .5s;}
+		a:hover { text-decoration:underline; color:#274256;}
 		.container { max-width:800px; margin:2em auto 0 auto; padding:2em 2em 1em 2em;}
 		p {font-size:24px; line-height:1.5em; font-weight:300; margin-bottom:1.5em;}
 		.links { text-align:center; line-height:1em; max-width:700px; margin:2em auto 1em auto;}
-		.links a { display:inline-block; border-radius:4px; font-size:18px; padding:.5em 1em; margin:0 .5em .5em 0; background:#333333; text-decoration:none; color:#77b175; transition:all .5s;}
-		.links a:hover { background:#000; color:#429f44;}
-		.heck { font-size:85%; text-align:center; border-top:1px solid #e5e5e5; display:block; padding-top:1em;}
+		.links a { font-size: 1.2em; display:inline-block; padding:.3em; text-decoration:none; color:#fff; opacity:.5; text-shadow:none;}
+		.links a:hover { opacity:1; }
 		.avatar { 
 			margin:0 auto; 
-			min-width: 200px;
+			min-width: 160px;
 			width: 35%;
 		    height:auto;
 		    display:block;
@@ -44,6 +51,8 @@
 			border:1px solid #dadada;
 		}
 	</style>
+
+	
 
 </head>
 <body>
@@ -60,37 +69,31 @@
 
 		<p>I recently joined <a href="http://get.planningcenteronline.com" title="Planning Center Online">Planning Center Online</a> as a product manager for a new <a href="http://get.planningcenteronline.com/resources/" title="Planning Center Resources">thing</a>.</p>
 
-		<p>I work and play in a little beach town in Southern California called <a href="https://maps.google.com/maps?q=Carlsbad,+CA&output=embed" title="Google Map">Carlsbad</a>. You should visit.</p>
-
-		<!--
-
-		<p>I make things on the web.</p>
-
-		<p>I'm one of these <a href="http://uxdiogenes.com/blog/on-being-a-designer-and-a-developer-not-quite-unicorn-rare" title="unicorns">unicorns</a> who can design and program (mainly in javascript, also in php &amp; ruby.) I've been able to work on some pretty great projects for some pretty great people.</p>
-
-		<p>I'm agency-friendly. I've worked with larger teams to breath life into commercial websites like <a href="https://www.hyundaiusa.com/" title="Hyundai">Hyundai</a>, <a href="http://www3.hilton.com/en/index.html" title="Hilton">Hilton</a>, <a href="http://www.toyota.com/" title="Toyota.com">Toyota</a>, <a href="http://www.callawaygolf.com/global/en-us.html" title="Callaway">Callaway</a>, and others.</p>
-
-		<p>I've also worked with small teams and startups. For the past few years I've been at <a href="http://hireahelper.com" title="HireAHelper.com">HireAHelper.com</a> where I was the designer, front end developer, copy writer, AB tester, and wearer of many hats.</p>
-
-		<p>If you have an interesting project or would just like to say hi, you totally should. I'm a friendly fella.</p>
-
-		<p>Or heck, just call me. 951.743.1224</p>
-
-		-->
+		<p>I work and play in a little beach town in Southern California called <a href="https://maps.google.com/maps?q=Carlsbad,+CA&output=embed" title="Google Map">Carlsbad</a>. Come visit. We have burritos.</p>
 
 		<p class="links">
-			<a href="mailto:email@jeremyricketts.com" title="Email me">email@jeremyricketts.com</a>
-			<a href="http://twitter.com/jeremyricketts" title="Twitter">@jeremyricketts</a>
-			<a href="http://github.com/jeremyricketts" title="GitHub">github</a>
-			<a href="http://dropbox.jeremyricketts.com.s3.amazonaws.com/Jeremy_Ricketts_Resume_Feb_09.pdf" title="Resume">neglected resume</a>
-			<a href="http://jeremyricketts.com/linkedin" title="LinkedIn">linkedin</a>
-			<a href="https://spacebox.io/s/1kXfzglTxX" title="Pay an invoice from Jeremy">pay an invoice</a>
+			<a href="http://twitter.com/jeremyricketts" title="Twitter"><span class="icon icon-twitter"></span></a>
+			<a href="http://github.com/jeremyricketts" title="GitHub"><span class="icon icon-github-alt"></span></a>
+			<a href="http://jeremyricketts.com/linkedin" title="LinkedIn"><span class="icon icon-linkedin"></span></a>
+			<a href="mailto:email@jeremyricketts.com" title="Email me"><span class="icon icon-envelope-alt"></span></a>
+			<a href="https://spacebox.io/s/1kXfzglTxX" title="Pay an invoice from Jeremy"><span class="icon icon-credit-card"></span></a>
 		</p>
-
-		<!-- <p class="heck">I made this site in 32 minutes flat!<br>The new one is coming soon&hellip; promise.<br>may 29, 2013</p> -->
 
 	</div>
 
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$(window).resize(function() {
+			if ( $(window).height() < '800') {
+				$('body').addClass('nobg');
+			} else {
+				$('body').removeClass('nobg');
+			}
+		});
+	});
+	</script>
 	
 
 </body>
