@@ -24,20 +24,21 @@
 
 	<style type="text/css">
 		* { box-sizing:border-box; margin:0; padding:0;}
-		body { font-family:'Open Sans',sans-serif; font-weight:300; color: #4d5669;
+		body { font-family:'Open Sans',sans-serif; font-weight:300; color: #444d5e;
 			background:#b7bec3 url(/img/bg.jpg) no-repeat center bottom fixed; 
 			background-size:100% auto;
 		}
-		body.nobg { 
-			background:#b7bec3; 
+		body.bottombg { 
+			background:#b7bec3 url(/img/bg.jpg) no-repeat center bottom; 
+			background-size:100% auto;
 		}
 		h1 { font-size:34px; text-align:center; font-weight:700; margin-bottom:1em; }
-		a { color:#788294; text-decoration:none; text-shadow: 0 1px 1px rgba(255,255,255,.5); transition:color .5s;}
+		a { color:#6a7384; text-decoration:none; text-shadow: 0 1px 1px rgba(255,255,255,.5); transition:color .5s;}
 		a:hover { text-decoration:underline; color:#274256;}
-		.container { max-width:800px; margin:2em auto 0 auto; padding:2em 2em 1em 2em;}
+		.container { max-width:700px; margin:2em auto 0 auto; padding:2em 1em 1em 1em;}
 		p {font-size:24px; line-height:1.5em; font-weight:300; margin-bottom:1.5em;}
 		.links { text-align:center; line-height:1em; max-width:700px; margin:2em auto 1em auto;}
-		.links a { font-size: 1.2em; display:inline-block; padding:.3em; text-decoration:none; color:#fff; opacity:.5; text-shadow:none;}
+		.links a { font-size: 1.2em; display:inline-block; padding:.3em; text-decoration:none; color:#fff; opacity:.5; text-shadow:none; transition:opacity .3s;}
 		.links a:hover { opacity:1; }
 		.avatar { 
 			margin:0 auto; 
@@ -64,9 +65,9 @@
 
 		<p>I do things. I read. I brew beer. I build things out of wood. I race my little car. I travel. I learn <a href="http://newbieonruby.com" title="Newbie On Ruby">new things</a> as often as I can.</p>
 
-		<p>I try to surround myself with people that are better than me. Better speakers, better writers, better coders, better designers, and better artists. That way I can get better too.</p>
+		<p>I work mostly in design and user interface on the web. I try to surround myself with people that are better than me at all the things I love to do. That way I can get better too.</p>
 
-		<p>I recently joined <a href="http://get.planningcenteronline.com" title="Planning Center Online">Planning Center Online</a> as a product manager for a new <a href="http://get.planningcenteronline.com/resources/" title="Planning Center Resources">thing</a>.</p>
+		<p>I recently joined <a href="http://get.planningcenteronline.com" title="Planning Center Online">Planning Center Online</a> as a product manager for a new <a href="http://get.planningcenteronline.com/resources/" title="Planning Center Resources">thing</a>. I love it.</p>
 
 		<p>I work and play in a little beach town in Southern California called <a href="https://maps.google.com/maps?q=Carlsbad,+CA&output=embed" title="Google Map">Carlsbad</a>. Come visit. We have burritos.</p>
 
@@ -84,12 +85,19 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
 	$(function() {
-		$(window).resize(function() {
-			if ( $(window).height() < '800') {
-				$('body').addClass('nobg');
+		// ah
+		function ah() {
+			if ( $(window).height() < '1000') {
+				$('body').addClass('bottombg');
 			} else {
-				$('body').removeClass('nobg');
+				$('body').removeClass('bottombg');
 			}
+		}
+		// fire on load
+		ah();
+		// fire on window resize
+		$(window).resize(function() {
+			ah();
 		});
 	});
 	</script>
