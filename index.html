@@ -53,6 +53,11 @@
 			-moz-border-radius: 50%;
 			border-radius: 50%;
 		}
+		@media only screen and (min-device-width : 320px) { 
+			h1, p {
+				font-size:1.4em;
+			}
+		}
 	</style>
 
 	
@@ -88,9 +93,10 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
 	$(function() {
+		var height = $('.container').height();
 		// ah
 		function ah() {
-			if ( $(window).height() < '1000') {
+			if ( $(window).height() < height) {
 				$('body').addClass('bottombg');
 			} else {
 				$('body').removeClass('bottombg');
