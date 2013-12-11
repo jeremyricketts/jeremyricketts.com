@@ -1,0 +1,137 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3/animation";
+
+//////////////////////////////
+// ANIMATIONS
+//////////////////////////////
+@include keyframes(starloop) {
+    0% { top:0; }
+    100% { top:100%;}
+}
+@include keyframes(fadein) {
+    0% { opacity:0; }
+    100% { opacity:1; }
+}
+@include keyframes(rocketup) {
+    0% { top: 70%; }
+    100% { top: 35%; }
+}
+@include keyframes(rocketshake) {
+    0%, 100% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-2px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-2px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+}
+
+//////////////////////////////
+// EXTENTION CLASSES
+//////////////////////////////
+@mixin star($size, $bright, $x, $speed) {
+    @if $size == "lg" { height:3px; width:3px;}
+    @if $size == "md" { height:2px; width:2px;}
+    @if $size == "sm" { height:1px; width:1px;}
+    @if $bright == 1 { background:white;}
+    @if $bright == 2 { background:lighten(white, 50%);}
+    @if $bright == 3 { background:lighten(white, 75%);}
+    left: $x;
+    @include animation(starloop linear $speed infinite);
+}
+
+//////////////////////////////
+// STYLES
+//////////////////////////////
+body {
+    background:black;
+    font-family: "HelveticaNeue-Thin", sans-serif; 
+    div {
+        position: absolute;
+        top: 0; left: 0; right:0; bottom:0;
+    }
+    .vignette {     
+        @include background-image(radial-gradient(60% 60%, transparent, black));
+    }
+    .planet {       
+        @include background-size(100% 280%);
+        background-repeat:no-repeat;
+        @include background-image(radial-gradient(100% 40%, #66ffff, transparent));
+        top:70%;
+        opacity:.5;
+    }
+    .subjects {
+        text-align: center;
+        .rocket {
+            position: absolute;
+            left: 0; right: 0;
+            @include animation(rocketup 2s ease-out 0s 1 forwards);
+            margin: auto;
+            img {
+                height:60px;
+                opacity:0;
+                @include animation(
+                    fadein 2.5s linear 0s 1 forwards,
+                    rocketshake 2s linear 0s infinite
+                    );
+            }
+        }
+        .searching {
+            position:absolute;
+            top:50%; width:100%;
+            color:#fff;
+            font-size:20px;
+        }
+        .logo {
+            position:absolute;
+            bottom:0%; left: 0; right: 0;
+            width:100%;
+            opacity:.5;
+            img {
+                max-width:40%;
+            }
+        }
+    }
+    .stars {
+        @include animation(fadein linear 3s);
+        span {
+            position:absolute;
+            top: 0%;
+            margin: auto;
+        }
+        .star1 { @include star(lg, 1, 15%, 4s) }
+        .star2 { @include star(lg, 2, 20%, 5s) }
+        .star3 { @include star(md, 3, 28%, 3s) }
+        .star4 { @include star(lg, 1, 47%, 8s) }
+        .star5 { @include star(sm, 2, 89%, 6s) }
+        .star6 { @include star(sm, 1, 53%, 4.4s) }
+        .star7 { @include star(md, 3, 33%, 2.5s) }
+        .star8 { @include star(lg, 3, 69%, 3s) }
+        .star9 { @include star(md, 1, 76%, 6.5s) }
+        .star10 { @include star(sm, 2, 81%, 7s) }
+        .star11 { @include star(lg, 1, 93%, 3.7s) }
+        .star12 { @include star(lg, 2, 5%, 2.3s) }
+        .star13 { @include star(md, 3, 38%, 5.4s) }
+        .star14 { @include star(lg, 1, 61%, 3.2s) }
+        .star15 { @include star(sm, 2, 83%, 2.9s) }
+        .star16 { @include star(sm, 1, 39%, 2.3s) }
+        .star17 { @include star(md, 3, 83%, 5.1s) }
+        .star18 { @include star(lg, 3, 77%, 3.7s) }
+        .star19 { @include star(md, 1, 48%, 6.5s) }
+        .star20 { @include star(lg, 1, 62%, 3.5s) }
+        .star21 { @include star(lg, 2, 84%, 2s) }
+        .star22 { @include star(lg, 1, 20%, 4.2s) }
+        .star23 { @include star(md, 3, 73%, 5.3s) }
+        .star24 { @include star(lg, 1, 15%, 2.6s) }
+        .star25 { @include star(sm, 2, 29%, 3.1s) }
+        .star26 { @include star(sm, 3, 82%, 6.4s) }
+        .star27 { @include star(md, 2, 73%, 7.5s) }
+        .star28 { @include star(lg, 1, 28%, 6.8s) }
+        .star29 { @include star(md, 3, 37%, 3.2s) }
+        .star30 { @include star(sm, 2, 28%, 5.2s) }
+    }
+}
