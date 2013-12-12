@@ -121,9 +121,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 15, ../sass/simple.scss */
 body {
   background: #333333;
-  font-family: "HelveticaNeue-Thin", sans-serif;
-  color: grey;
-  text-shadow: 0 1px 0 #222222;
+  color: #949494;
   text-align: center;
   font-size: 20px;
   overflow: hidden;
@@ -140,10 +138,11 @@ body .wrapper {
 }
 /* line 29, ../sass/simple.scss */
 body .warning {
+  font-family: "Helvetica-Bold", sans-serif;
   color: #cc3b2b;
   margin: 0 0 28px 0;
 }
-/* line 33, ../sass/simple.scss */
+/* line 34, ../sass/simple.scss */
 body .animation {
   display: inline-block;
   position: relative;
@@ -156,7 +155,7 @@ body .animation {
   border-radius: 16px;
   margin: 0;
 }
-/* line 42, ../sass/simple.scss */
+/* line 43, ../sass/simple.scss */
 body .animation .a {
   position: absolute;
   left: 18px;
@@ -169,7 +168,7 @@ body .animation .a {
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 51, ../sass/simple.scss */
+/* line 52, ../sass/simple.scss */
 body .animation .a1, body .animation .a2, body .animation .a3, body .animation .a4 {
   position: absolute;
   background: grey;
@@ -179,7 +178,7 @@ body .animation .a1, body .animation .a2, body .animation .a3, body .animation .
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 57, ../sass/simple.scss */
+/* line 58, ../sass/simple.scss */
 body .animation .a1 {
   -moz-animation: dot 1s ease 0 infinite;
   -webkit-animation: dot 1s ease 0 infinite;
@@ -187,7 +186,7 @@ body .animation .a1 {
   left: 14px;
   top: 16px;
 }
-/* line 61, ../sass/simple.scss */
+/* line 62, ../sass/simple.scss */
 body .animation .a2 {
   -moz-animation: dot 1s ease 0.33s infinite;
   -webkit-animation: dot 1s ease 0.33s infinite;
@@ -195,7 +194,7 @@ body .animation .a2 {
   left: 42px;
   top: 16px;
 }
-/* line 65, ../sass/simple.scss */
+/* line 66, ../sass/simple.scss */
 body .animation .a3 {
   -moz-animation: dot 1s ease 0.66s infinite;
   -webkit-animation: dot 1s ease 0.66s infinite;
@@ -203,7 +202,7 @@ body .animation .a3 {
   left: 14px;
   top: 43px;
 }
-/* line 69, ../sass/simple.scss */
+/* line 70, ../sass/simple.scss */
 body .animation .a4 {
   -moz-animation: dot 1s ease 1s infinite;
   -webkit-animation: dot 1s ease 1s infinite;
@@ -211,8 +210,9 @@ body .animation .a4 {
   left: 42px;
   top: 43px;
 }
-/* line 74, ../sass/simple.scss */
+/* line 75, ../sass/simple.scss */
 body .checking {
   display: block;
   margin-top: 20px;
+  font-family: "HelveticaNeue-Thin", sans-serif;
 }
