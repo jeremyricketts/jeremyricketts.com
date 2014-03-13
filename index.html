@@ -26,27 +26,47 @@
 		* { box-sizing:border-box; margin:0; padding:0; }
 		body { 
 			font-family:'Open Sans',sans-serif; font-weight:300; color: #444d5e;
-			background:#b7bec3 url(/img/bg.jpg) no-repeat center bottom fixed; background-size:100% auto;
-		}
-		body.bottombg { 
-			background:#b7bec3 url(/img/bg.jpg) no-repeat center bottom;  background-size:100% auto;
+			background:#b7bec3 url(/img/bg.jpg) no-repeat center bottom; background-size:100% auto;
 		}
 		.lt-ie9 body { background:#b7bec3; } /* no soup for you */
 		h1 { font-size:34px; text-align:center; font-weight:700; margin:1em 0; }
-		a { color:#dfe9f1; text-decoration:none; text-shadow: 0 1px 1px rgba(0,0,0,.5); transition:color .5s; }
-		a:hover { text-decoration:none; color:#fff; opacity:1; }
-		.container { max-width:700px; margin:2em auto 0 auto; padding:1em 1em 15em 1em; }
+		a { color:#444d5e; text-decoration:none; }
+		a:hover { text-decoration:underline; color:#fff; opacity:1; }
+		.container { max-width:700px; margin:2em auto 0 auto; padding:1em 1em 10em 1em; }
 		p {font-size:20px; line-height:1.5em; font-weight:300; margin-bottom:1.5em; }
 		.links { text-align:center; line-height:1em; max-width:700px; margin:2em auto 1em auto; }
-		.links a { font-size: 1.1em; display:inline-block; padding:.3em; text-decoration:none; color:#fff; opacity:.75; text-shadow:none; }
+		.links a { font-size: 1.2em; display:inline-block; padding:.3em; text-decoration:none; color:#fff; opacity:.75; text-shadow:none; }
 		.links a:hover { opacity:1; text-shadow:none; }
 		.avatar { margin:0 auto; width:280px;max-width: 60%; height:auto;display:block; }
+		#instafeed {
+			text-align: center;
+			margin:0 auto 15em auto;
+			max-width:900px;
+		}
+		#instafeed a {
+			display:inline-block;
+			margin:.5%;
+			width:10%;
+		}
+		#instafeed a img {
+			width:100%;
+			max-width: 100%;
+			border:2px solid #d5dfe6;
+			border-radius:2px;
+			transition:all .2s;
+		}
+		#instafeed a:hover img {
+			border:2px solid #fff;
+		}
 		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 			h1 { font-size: 18px; } 
 			p { font-size: 14px; }
 			a { opacity:1; }
 			.container {padding-bottom:3em;}
 			.nomob { display:none; }
+			#instafeed a {
+				width:25%;
+			}
 		}
 	</style>
 </head>
@@ -58,11 +78,11 @@
 
 		<h1>Hello, I'm Jeremy Ricketts</h1>
 
-		<p>Look. You knew that. You're at <strong>Jeremy Ricketts dot com</strong>&hellip; not Janet Jackson dot com. Not Ted Nugent dot com. Not Barbara Walters dot com. This is Jeremy Ricketts dot com. So, buckle up. Because that's me staring at you through that triangle.</p>
+		<!-- <p>Look. You knew that. You're at <strong>Jeremy Ricketts dot com</strong>&hellip; not Janet Jackson dot com. Not Ted Nugent dot com. Not Barbara Walters dot com. This is Jeremy Ricketts dot com. So, buckle up. Because that's me staring at you through that triangle.</p> -->
 
 		<p>I work at <a href="http://get.planningcenteronline.com" title="Planning Center Online">Planning Center Online</a>. I live in <a href="https://maps.google.com/maps?q=Carlsbad,+CA&output=embed" title="Google Map">Carlsbad</a> California. You should visit. We have burritos.</p>
 
-		<p class="nomob">Tech recruiters with my 2009 resume, please <a href="http://zombo.com" title="The only limit... is yourself.">inquire here</a>.</p>
+		<!-- <p class="nomob">Tech recruiters with my 2009 resume, please <a href="http://zombo.com" title="The only limit... is yourself.">inquire here</a>.</p> -->
 
 		<!--
 
@@ -86,25 +106,21 @@
 
 	</div>
 
+	<div id="instafeed"></div>
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="/js/libs/instafeed.js"></script>
+
 	<script type="text/javascript">
-	$(function() {
-		var height = $('.container').height();
-		// ah
-		function ah() {
-			if ( $(window).height() < height) {
-				$('body').addClass('bottombg');
-			} else {
-				$('body').removeClass('bottombg');
-			}
-		}
-		// fire on load
-		ah();
-		// fire on window resize
-		$(window).resize(function() {
-			ah();
+		var feed = new Instafeed({
+		get: 'user',
+		//tagName: 'awesome',
+		clientId: 'e20b2409e95244ca8753ba95a0a9e2c1',
+		userId: 1123576,
+        accessToken: '1123576.e20b240.b2a69bc6344f4dd1bba4ed17b9ac6805',
+        limit: 27
 		});
-	});
+		feed.run();
 	</script>
 
 	<!-- GOOGLE ANALYTICS -->
