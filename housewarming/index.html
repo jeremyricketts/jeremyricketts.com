@@ -8,8 +8,10 @@
 	<!-- Github pages, Google fonts, and BootstrapCDN... who needs a server. LULZ. -->
 	<link href="//normalize-css.googlecode.com/svn/trunk/normalize.css" rel="stylesheet" type="text/css">
 	<!-- <link href="//fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet" type="text/css"> -->
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet" type="text/css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+	<!--
 
 	<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.6/firebase.js'></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -42,48 +44,67 @@
 		
 	</script>
 
+	-->
+
 	<style type="text/css">
 		* { 
 			box-sizing:border-box; 
 		}
 		html {
-			background: #715f48 url(beach2.jpg) no-repeat top center fixed; */
+			background: #715f48 url(bg.jpg) no-repeat top center fixed; */
 			/*background: #b7bec3; */
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
-			margin:0; padding:0 0 500px 0;
+			margin:0; padding:0 0 40px 0;
 		}
 		body { 
-			font-family:'Open Sans',sans-serif; font-weight:300; 
-			color: #474747;
+			font-family:'Raleway',sans-serif;
+			color: #e6e6e6;
 			font-size:120%;
 			margin:0; padding:80px 0 0 0;
 			line-height: 1.5em;
 		}
 		a:link, a:visited {
-			color: #474747;
+			color: #e6e6e6;
 		}
 		.wrapper {
 			max-width:1000px;
 			margin:0 auto;
 		}
+		.pj {
+			margin:0 auto;
+			height:200px; width:200px;
+			border:2px solid #fff;
+			border-radius:50%;
+		}
 		.centered {
 			text-align: center;
 		}
+		.top {
+			display:block;
+			margin-bottom:60px;
+		}
 		h1 {
-			margin:0 0 .5em 0;
-			font-size: 3em;
+			margin:1em 0 .5em 0;
+			font-size: 3em; font-weight: 300; line-height: 100%;
+			color:#ffff66;
 		}
 		h2 {
-			margin-top:2em;
 			text-align: center;
+			color:#ffff66;
 		}
 		span.sub {
 			margin:0;
 			/*color:#fff;*/
 			font-weight:300;
+		}
+		ul {
+			color:#999;
+		}
+		ul strong {
+			color:#e6e6e6;
 		}
 		.cols2 {
 			width:100%;
@@ -92,21 +113,16 @@
 		.cols2 .col {
 			float:left;
 			width:50%;
-			padding:20px;
+			/*padding:0 20px;*/
 		}
-		.cols3 {
-			width:100%;
-			display:inline-block;
-		}
-		.cols3 .col {
-			float:left;
-			width:33%;
-			padding:20px;
+		.cols2 .col ul {
+			padding-right:20px;
 		}
 		.section {
-			padding:30px 0;
+			padding:60px 0;
 			display:block;
 			text-align:center;
+			font-size:200%;
 			opacity:.4;
 		}
 		.map {
@@ -114,22 +130,26 @@
 			border-bottom:1px solid #fff;
 			width:100%;
 			height:400px;
-			margin:60px 0;
+		}
+		.also {
+			display:block;
+			text-align: center;
+			max-width:600px; margin:0 auto;
+			padding-left:20px;
+			padding-right:20px;
 		}
 		.rsvp {
-			/*text-align: center;*/
-		}
-		.rsvp input[type=text] {
-			font-size:24px;
-			padding:.2em .4em;
-			width:100%;
 			background:#fff;
-			border:2px solid #999;
-			border-radius:4px;
+			display:block;
+			padding:20px 0;
+			margin-bottom: 40px;
 		}
-		.rsvp input[type=submit] {
-			font-size:24px;
+		.rsvp iframe {
+			max-width: 1000px;
+			margin:0 auto;
+			display:block;
 		}
+
 		@media only screen and (max-width: 600px) {
 			.cols2 .col {
 				width:100%;
@@ -154,6 +174,8 @@
 				<h2>When:</h2>
 				<p>March 29<sup>th</sup><br>4pm to ???</p>
 
+				<img class="pj" src="pj1.jpg" alt="PJ">
+
 			</div>
 
 			<div class="col centered">
@@ -161,16 +183,25 @@
 				<h2>Where:</h2>
 				<p>254 Juniper Ave. B4<br>Carlsbad, CA 92008</p>
 
+				<img class="pj" src="pj2.jpg" alt="PJ">
+
 			</div>
 
 		</div><!-- .cols -->
 
 		<div class="section">
-			<span class="fa-stack fa-lg">
-  				<i class="fa fa-circle fa-stack-2x"></i>
-  				<i class="fa fa-hand-o-down fa-stack-1x fa-inverse"></i>
-			</span>
+  			<i class="fa fa-hand-o-down"></i>
 		</div>
+
+	</div>
+
+	<div id="map_canvas" class="map"></div>
+
+	<div class="section">
+		<i class="fa fa-hand-o-down"></i>
+	</div>
+
+	<div class="wrapper">
 
 		<div class="cols2">
 
@@ -199,40 +230,30 @@
 
 		</div>
 
-		<div class="section">
-			<span class="fa-stack fa-lg">
-  				<i class="fa fa-circle fa-stack-2x"></i>
-  				<i class="fa fa-hand-o-down fa-stack-1x fa-inverse"></i>
-			</span>
-		</div>
+		<h2>Also:</h2>
+		<p class="also">Our place is a block from the beach, so if you want to come early and make it a beach day&hellip; go for it! Sunset is right at 7pm so we'll probably walk over and check that out too.</p>
 
 	</div>
-
-	<div id="map_canvas" class="map"></div>
 
 	<div class="section">
-			<span class="fa-stack fa-lg">
-  				<i class="fa fa-circle fa-stack-2x"></i>
-  				<i class="fa fa-hand-o-down fa-stack-1x fa-inverse"></i>
-			</span>
-		</div>
+		<i class="fa fa-hand-o-down"></i>
+	</div>
 
-	<div class="wrapper rsvp">
-		
-		<h2>RSVP:</h2>
-		<div class="cols3">
-			<div class="col">
-				<input type="text" placeholder="your name">
-			</div>
-			<div class="col">
-				<input type="text" placeholder="how many total?">
-			</div>
-			<div class="col">
-				<input type="submit" value="submit">
-			</div>
+	<div class="rsvp">
+
+		<div class="wrapper">
+
+			<iframe src="https://docs.google.com/forms/d/1VIP2u_WFEnh9hljZ65wgK6KEZA8-4r-f5ZcWSDwpOWM/viewform?embedded=true" width="400" height="380" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
 		</div>
 
 	</div>
+
+	<div class="section">
+		<i class="fa fa-thumbs-o-up"></i>
+	</div>
+
+	
 
 	<!-- =============== -->
 	
