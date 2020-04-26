@@ -1,9 +1,3 @@
----
-#layout: default
-#title: Jeremy Ricketts is a designer and web developer in Carlsbad, CA.
-#id: index # http://jekyllrb.com/docs/variables/ Used for adding a page-"id" class to the body.
----
-
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -14,48 +8,66 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<title>Jeremy Ricketts</title>
-	<meta name="description" content="Jeremy Ricketts is a web developer in Carlsbad CA">
-	
+	<meta name="description" content="Jeremy Ricketts is a Product Manager in Carlsbad, CA">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+	<!-- Github pages, Google fonts, and BootstrapCDN... who needs a server. LULZ. -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type="text/css">
 
 	<style type="text/css">
-		* { box-sizing:border-box; margin:0; padding:0;}
-		body { font-family:'Open Sans',sans-serif; font-weight:300; background:#efefef url(/img/wavegrid.png); color: #5e5e57;}
-		h1 { font-size:36px; text-align:center; font-weight:700; color:#5e5e57; margin-bottom:1em;}
-		a { color:#429f44; text-decoration:none;}
-		a:hover { text-decoration:underline;}
-		.container { max-width:700px; margin:20% auto 0 auto; padding:2em 2em 1em 2em; background:#f7f7f7; box-shadow:0 0 8px #e5e5e5; text-align:center;}
-		p {font-size:20px; line-height:1.5em; font-weight:300; margin-bottom:1.5em;}
-		.links { text-align:center; line-height:1em; max-width:500px; margin:1.5em auto 1em auto;}
-		.links a { display:inline-block; border-radius:4px; font-size:13px; padding:.5em 1em; margin:0 .5em .5em 0; background:#333333; text-decoration:none; color:#77b175; transition:all .5s;}
-		.links a:hover { background:#000; color:#429f44;}
-		.heck { font-size:85%; color:#a0a096; text-align:center; border-top:1px solid #e5e5e5; display:block; padding-top:1em;}
+		* { box-sizing:border-box; margin:0; padding:0; }
+		html { height: 100%; }
+		body {
+			font-family:'Open Sans',sans-serif; font-weight:300; color: #444d5e;
+			background:#b7bec3 url(/img/bg.jpg) no-repeat center bottom; background-size:100% auto;
+		}
+		.lt-ie9 body { background:#b7bec3; } /* no soup for you */
+		h1 { font-size:34px; text-align:center; font-weight:700; margin:1em 0; }
+		a { color:#444d5e; text-decoration:none; border-bottom: 1px solid #9098A6;}
+		a:hover { color:#fff; opacity:1;}
+		.container { max-width:700px; margin:2em auto 0 auto; padding:1em 1em 10em 1em; }
+		p {font-size:20px; line-height:1.5em; font-weight:300; margin-bottom:1.5em; text-align: center;}
+		.links { text-align:center; line-height:1em; max-width:700px; margin:2em auto 1em auto; }
+		.links a { font-size: 1.2em; display:inline-block; padding:.3em; text-decoration:none; color:#fff; opacity:.75; text-shadow:none; border-bottom: 0;}
+		.links a:hover { opacity:1; text-shadow:none; }
+		.avatar { margin:0 auto; width:280px; max-width: 60%; height:auto;display:block; }
+		.smaller { font-size:14px; }
+		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+			h1 { font-size: 18px; }
+			p { font-size: 14px; }
+			a { opacity:1; }
+			.container {padding-bottom:3em;}
+			.nomob { display:none; }
+		}
 	</style>
-
 </head>
 <body>
-  
+
 	<div class="container">
+
+		<img class="avatar" src="/img/jeremy-ricketts-triangle.png" alt="Jeremy Ricketts">
 
 		<h1>payment received</h1>
 
 		<p>Thank you! You'll be receiving an email confirmation soon.</p>
-		<!-- <p><a href="/" title="Homepage">Homepage</a></p> -->
-
-		<p class="links">
-			<a href="/" title="Homepage">Homepage</a>
-			<a href="mailto:email@jeremyricketts.com" title="Email me">email@jeremyricketts.com</a>
-			<a href="http://twitter.com/jeremyricketts" title="Twitter">@jeremyricketts</a>
-			<a href="http://github.com/jeremyricketts" title="GitHub">github</a>
-			<a href="http://jeremyricketts.com/resume" title="Resume">neglected resume</a>
-			<a href="http://jeremyricketts.com/linkedin" title="LinkedIn">linkedin</a>
-		</p>
 
 	</div>
 
-	
+
+	<!-- GOOGLE ANALYTICS -->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-362990-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
 
 </body>
 </html>
