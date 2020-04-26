@@ -1,0 +1,126 @@
+---
+#layout: default
+#title: Jeremy Ricketts is a designer and web developer in Carlsbad, CA.
+#id: index # http://jekyllrb.com/docs/variables/ Used for adding a page-"id" class to the body.
+---
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Jeremy Ricketts</title>
+	<meta name="description" content="Jeremy Ricketts is a web developer in Carlsbad CA">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Github pages, Google fonts, and BootstrapCDN... who needs a server. LULZ. -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+	<style type="text/css">
+		* { box-sizing:border-box; margin:0; padding:0; }
+		body { 
+			font-family:'Open Sans',sans-serif; font-weight:300; color: #444d5e;
+			background:#b7bec3 url(/img/bg.jpg) no-repeat center bottom; background-size:100% auto;
+		}
+		.lt-ie9 body { background:#b7bec3; } /* no soup for you */
+		h1 { font-size:34px; text-align:center; font-weight:700; margin:1em 0; }
+		a { color:#444d5e; text-decoration:none; border-bottom: 1px solid #9098A6;}
+		a:hover { color:#fff; opacity:1;}
+		.container { max-width:700px; margin:2em auto 0 auto; padding:1em 1em 10em 1em; }
+		p {font-size:20px; line-height:1.5em; font-weight:300; margin-bottom:1.5em; }
+		.links { text-align:center; line-height:1em; max-width:700px; margin:2em auto 1em auto; }
+		.links a { font-size: 1.2em; display:inline-block; padding:.3em; text-decoration:none; color:#fff; opacity:.75; text-shadow:none; border-bottom: 0;}
+		.links a:hover { opacity:1; text-shadow:none; }
+		.avatar { margin:0 auto; width:280px; max-width: 60%; height:auto;display:block; }
+		.smaller { font-size:12px; }
+		#instafeed {
+			text-align: center;
+			margin:0 auto 15em auto;
+			max-width:900px;
+		}
+		#instafeed a {
+			display:inline-block;
+			margin:.5%;
+			width:10%;
+		}
+		#instafeed a img {
+			width:100%;
+			max-width: 100%;
+			border:2px solid #d5dfe6;
+			border-radius:2px;
+			transition:all .2s;
+		}
+		#instafeed a:hover img {
+			border:2px solid #fff;
+		}
+		@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+			h1 { font-size: 18px; } 
+			p { font-size: 14px; }
+			a { opacity:1; }
+			.container {padding-bottom:3em;}
+			.nomob { display:none; }
+			#instafeed a {
+				width:25%;
+			}
+		}
+	</style>
+</head>
+<body>
+  
+	<div class="container">
+
+		<img class="avatar" src="/img/jeremy-ricketts-triangle.png" alt="Jeremy Ricketts">
+
+		<h1>Hello, I'm Jeremy Ricketts</h1>
+		
+		<p>I review <a href="http://birdcallreview.com" title="Bird Call Review">review bird calls</a>.</p>
+		<p>I also work at <a href="http://get.planningcenteronline.com" title="Planning Center Online">Planning Center Online</a> or whatever. I live in <a href="https://www.google.com/maps/place/Carlsbad,+CA/" title="Google Map">Carlsbad</a> California. You should visit. We have burritos.</p>
+		<p class="nomob smaller">Tech recruiters with my 2009 resume, please <a href="http://zombo.com" title="The only limit... is yourself.">inquire here</a>.</p>
+		<p class="links">
+			<a href="http://twitter.com/jeremyricketts" title="Twitter"><span class="icon icon-twitter"></span></a>
+			<a href="http://github.com/jeremyricketts" title="GitHub"><span class="icon icon-github-alt"></span></a>
+			<a href="http://jeremyricketts.com/linkedin" title="LinkedIn"><span class="icon icon-linkedin"></span></a>
+			<a href="mailto:email@jeremyricketts.com" title="Email me"><span class="icon icon-envelope-alt"></span></a>
+			<a href="https://cash.me/$jeremyricketts" title="Pay me"><span class="icon icon-credit-card"></span></a>
+		</p>
+
+	</div>
+
+	<div id="instafeed"></div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="/js/libs/instafeed.js"></script>
+
+	<script type="text/javascript">
+		var feed = new Instafeed({
+		get: 'user',
+		//tagName: 'awesome',
+		clientId: 'e20b2409e95244ca8753ba95a0a9e2c1',
+		userId: 1123576,
+        accessToken: '1123576.e20b240.b2a69bc6344f4dd1bba4ed17b9ac6805',
+        limit: 18
+		});
+		feed.run();
+	</script>
+
+	<!-- GOOGLE ANALYTICS -->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-362990-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+
+</body>
+</html>

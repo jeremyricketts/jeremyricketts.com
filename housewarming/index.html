@@ -1,0 +1,315 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Housewarming Party</title>
+	<meta name="description" content="We throwin a housewarming party YO.">
+	<!-- Github pages, Google fonts, and BootstrapCDN... who needs a server. LULZ. -->
+	<link href="//normalize-css.googlecode.com/svn/trunk/normalize.css" rel="stylesheet" type="text/css">
+	<!-- <link href="//fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet" type="text/css"> -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+	<!--
+
+	<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.6/firebase.js'></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+	<script>
+	$(function() {
+
+		console.log('On jQuery ' + $().jquery);
+
+		var myDataRef = new Firebase('https://housewarming-rsvp.firebaseio.com/');
+
+		function rsvp(name, guests) {
+			
+			// Seed data
+			// var name = "Katie Ricketts";
+			// var guests = "3";
+			myDataRef.push({name: name, guests: guests});
+
+			myDataRef.on('child_added', function(snapshot) {
+				var listdata = snapshot.val();
+				displaylist(listdata.name, listdata.guests);
+			});
+			function displaylist(name, guests){
+				console.log("name: " + name);
+				console.log("guests: " + guests);
+			}
+		};
+		console.log(rsvp("hey","3"));
+	});
+		
+	</script>
+
+	-->
+
+	<style type="text/css">
+		* { 
+			box-sizing:border-box; 
+		}
+		html {
+			background: #000 url(bg.jpg) no-repeat top center fixed; */
+			/*background: #b7bec3; */
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			margin:0; padding:0 0 40px 0;
+		}
+		body { 
+			font-family:'Raleway',sans-serif;
+			color: #e6e6e6;
+			font-size:120%;
+			margin:0; padding:80px 0 0 0;
+			line-height: 1.5em;
+		}
+		a:link, a:visited {
+			color: #e6e6e6;
+		}
+		.wrapper {
+			max-width:1000px;
+			margin:0 auto;
+		}
+		.pj {
+			margin:0 auto;
+			height:200px; width:200px;
+			border:2px solid #fff;
+			border-radius:50%;
+		}
+		.centered {
+			text-align: center;
+		}
+		.top {
+			display:block;
+			margin-bottom:60px;
+		}
+		h1 {
+			margin:1em 0 .5em 0;
+			font-size: 3em; font-weight: 300; line-height: 100%;
+			color:#ffff66;
+		}
+		h2 {
+			text-align: center;
+			color:#ffff66;
+		}
+		span.sub {
+			margin:0;
+			/*color:#fff;*/
+			font-weight:300;
+		}
+		ul {
+			color:#999;
+		}
+		ul strong {
+			color:#e6e6e6;
+		}
+		.cols2 {
+			width:100%;
+			display:inline-block;
+		}
+		.cols2 .col {
+			float:left;
+			width:50%;
+			/*padding:0 20px;*/
+		}
+		.cols2 .col ul {
+			padding-right:20px;
+		}
+		.section {
+			padding:60px 0;
+			display:block;
+			text-align:center;
+			font-size:200%;
+			opacity:.4;
+		}
+		.map {
+			border-top:1px solid #fff;
+			border-bottom:1px solid #fff;
+			width:100%;
+			height:400px;
+		}
+		.also {
+			display:block;
+			text-align: center;
+			max-width:600px; margin:0 auto;
+			padding-left:20px;
+			padding-right:20px;
+		}
+		.rsvp {
+			background:#fff;
+			display:block;
+			padding:20px 0;
+			margin-bottom: 40px;
+		}
+		.rsvp iframe {
+			max-width: 1000px;
+			margin:0 auto;
+			display:block;
+		}
+
+		@media only screen and (max-width: 600px) {
+			.cols2 .col {
+				width:100%;
+				clear:both;
+			}
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="wrapper">
+		
+		<div class="top centered">
+			<h1>House Warming Party</h1>
+			<span class="sub">at Phil &amp; Jeremy's</span>
+		</div>
+
+		<div class="cols2">
+
+			<div class="col centered">
+
+				<h2>When:</h2>
+				<p>March 29<sup>th</sup><br>4pm to ???</p>
+
+				<img class="pj" src="pj1.jpg" alt="PJ">
+
+			</div>
+
+			<div class="col centered">
+				
+				<h2>Where:</h2>
+				<p>254 Juniper Ave. B4<br>Carlsbad, CA 92008</p>
+
+				<img class="pj" src="pj2.jpg" alt="PJ">
+
+			</div>
+
+		</div><!-- .cols -->
+
+		<div class="section">
+  			<i class="fa fa-hand-o-down"></i>
+		</div>
+
+	</div>
+
+	<div id="map_canvas" class="map"></div>
+
+	<div class="section">
+		<i class="fa fa-hand-o-down"></i>
+	</div>
+
+	<div class="wrapper">
+
+		<div class="cols2">
+
+			<div class="col">
+
+				<h2>We'll have:</h2>
+				<ul>
+					<li><strong>Home brewed beer:</strong> Chocolate Peanut Butter Oatmeal Stout, IPA, Hard Blackberry Cider</li>
+					<li><strong>A BBQ:</strong> It will have BBQ chicken on it.</li>
+					<li><strong>Giant Jenga:</strong> It's crazy fun.</li>
+					<li><strong>Corn hole:</strong> Also fun. Not crazy fun. Just normal fun.</li>
+				</ul>
+
+			</div>
+
+			<div class="col">
+
+				<h2>You can bring:</h2>
+				<ul>
+					<li><strong>Nothing:</strong> Just show up if you want. Seriously.</li>
+					<li><strong>Something to share:</strong> Like a side dish or guac or something like that.</li>
+					<li><strong>Beer you like:</strong> My beer might suck. It's brewing now. Better hedge your bets.</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+		<h2>Also:</h2>
+		<p class="also">Our place is a block from the beach, so if you want to come early and make it a beach day&hellip; go for it! Sunset is right at 7pm so we'll probably walk over and check that out too.</p>
+
+	</div>
+
+	<div class="section">
+		<i class="fa fa-hand-o-down"></i>
+	</div>
+
+	<div class="rsvp">
+
+		<div class="wrapper">
+
+			<iframe src="https://docs.google.com/forms/d/1VIP2u_WFEnh9hljZ65wgK6KEZA8-4r-f5ZcWSDwpOWM/viewform?embedded=true" width="400" height="420" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+		</div>
+
+	</div>
+
+	<p class="centered"><a href="https://docs.google.com/spreadsheet/ccc?key=0AtLDv09Cv5jsdEhETkNZR3VRYW9kOE0tajFPNGhQR3c&usp=sharing">Here's who has RSVPd so far</a>.</p>
+
+	<div class="section">
+		<i class="fa fa-thumbs-o-up"></i>
+	</div>
+
+	
+
+	<!-- =============== -->
+	
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+	<script type="text/javascript">
+		var geocoder;
+		var map;
+		var address ="254 Juniper Ave B4 Carlsbad CA 92008";
+		function initialize() {
+		geocoder = new google.maps.Geocoder();
+		var latlng = new google.maps.LatLng(-34.397, 150.644);
+		var myOptions = {
+			zoom: 15,
+			center: latlng,
+			mapTypeControl: true,
+			mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+			navigationControl: true,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			scrollwheel: false
+		};
+		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+		if (geocoder) {
+		  geocoder.geocode( { 'address': address}, function(results, status) {
+		    if (status == google.maps.GeocoderStatus.OK) {
+		      if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+		      map.setCenter(results[0].geometry.location);
+
+		        var infowindow = new google.maps.InfoWindow(
+		            { content: '<b>'+address+'</b>',
+		              size: new google.maps.Size(150,50)
+		            });
+
+		        var marker = new google.maps.Marker({
+		            position: results[0].geometry.location,
+		            map: map, 
+		            title:address
+		        }); 
+		        google.maps.event.addListener(marker, 'click', function() {
+		            infowindow.open(map,marker);
+		        });
+
+		      } else {
+		        //alert("No results found");
+		      }
+		    } else {
+		      //alert("Geocode was not successful for the following reason: " + status);
+		    }
+		  });
+		}
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+
+	
+	
+</body>

@@ -1,0 +1,81 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3/animation";
+
+* { @include box-sizing(border-box);}
+
+//////////////////////////////
+// ANIMATIONS
+//////////////////////////////
+@include keyframes(dot) {
+    0% { opacity:0;}
+    50% { opacity:1;}
+    100% { opacity:0;}
+}
+body {
+    background:#333333;
+    color: #949494; 
+    // text-shadow: 0 1px 0 #222222;
+    text-align: center;
+    font-size: 20px;
+    overflow: hidden;
+    .wrapper {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        width:300px; margin-left: -150px;
+        height:200px; margin-top: -100px;
+    }
+    .warning {
+        font-family: "Helvetica-Bold", sans-serif; 
+        color:#cc3b2b;
+        margin:0 0 28px 0;
+    }
+    .animation {
+        display:inline-block;
+        position:relative;
+        margin:0 auto;
+        height:88px;
+        width:88px;
+        border:6px solid grey;
+        @include border-radius(16px);
+        margin:0;
+        .a {
+            position: absolute;
+            left:18px; right:18px;
+            height:1px;
+            top:-2px;
+            background:grey;
+            border:4px solid grey;
+            @include border-radius(10px);
+        }
+        .a1, .a2, .a3, .a4 {
+            position:absolute;
+            background: grey;
+            height: 22px; width: 22px;
+            @include border-radius(2px);
+        }
+        .a1 {
+            @include animation(dot 1s ease 0 infinite);
+            left:14px; top: 16px;
+        }
+        .a2 {
+            @include animation(dot 1s ease .33s infinite);
+            left:42px; top: 16px;
+        }
+        .a3 {
+            @include animation(dot 1s ease .66s infinite);
+            left:14px; top: 43px;
+        }
+        .a4 {
+            @include animation(dot 1s ease 1s infinite);
+            left:42px; top: 43px;
+        }
+    }
+    .checking {
+        display:block;
+        margin-top: 20px;
+        font-family: "HelveticaNeue-Thin", sans-serif; 
+    }
+}
+

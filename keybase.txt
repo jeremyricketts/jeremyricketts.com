@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jeremyricketts
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jeremyricketts.com
+  * I am jeremyricketts (https://keybase.io/jeremyricketts) on keybase.
+  * I have a public key ASBJ6_lMhNoqAs1Ax6BX0tj89RxsEkCgnCdIca7iL74pdwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01019f64cd1700fee9eb0b88ed60f2e05363262dd7b38d749253aa8bcae909487bfd0a",
+      "host": "keybase.io",
+      "kid": "012049ebf94c84da2a02cd40c7a057d2d8fcf51c6c1240a09c274871aee22fbe29770a",
+      "uid": "e7faf30641367c1e10733c61c81b4e19",
+      "username": "jeremyricketts"
+    },
+    "merkle_root": {
+      "ctime": 1565680801,
+      "hash": "8baf18a6b5d820ff3f23648fd65d289ceb17f72152dcb75247eb5294ec8d904773fc2e41c4969921e90dff5209111b8fa0a2a60fbb164d9c2c6a265a04f94611",
+      "hash_meta": "2c7c149896e3c1e584f307afa1da670b89e90b5ece09283c6b0a76d122f8dbe6",
+      "seqno": 6001528
+    },
+    "service": {
+      "entropy": "wmpYxOUEwvsDkY5Dt9V0/Sfq",
+      "hostname": "jeremyricketts.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.3.0"
+  },
+  "ctime": 1565680809,
+  "expire_in": 504576000,
+  "prev": "9d573cb23b3c89e3ae166204a7d856015c5db64716cd6d31ea7e64e5d409c1dd",
+  "seqno": 18,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgSev5TITaKgLNQMegV9LY/PUcbBJAoJwnSHGu4i++KXcKp3BheWxvYWTESpcCEsQgnVc8sjs8ieOuFmIEp9hWAVxdtkcWzW0x6n5k5dQJwd3EINA6IAssp1n2CoGt3S0PXYolokmkOWY2J5J4WqinyQejAgHCo3NpZ8RAvccGmnPd0gwwdTHB7osTVGxFSVvvya08JCOtDELIv30wybzwqpEroxpLt/+hW4lVABFXt3QvN5W4ZZLa/FSqBqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILA+m9YUsB6A/LKUu2XQRWJ69DQy4nXbv5L7mYp2bT2Go3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jeremyricketts
+
+==================================================================

@@ -1,0 +1,511 @@
+@import "compass"; // Gem. Compass 0.12.2 (06/24/2012)
+@import "animation"; // Gem. https://github.com/ericam/compass-animation For Compass v <= 0.12
+@import "animation/animate"; // Gem. Required by animation.
+@import "normalize"; // File. normalize.css v1.1.0, modified to remove IE67 hacks.
+@import "utilities"; // File. Utility classes from HTML5BP, custom utility classes, and SASS mixins.
+@import "media-queries"; // File. Don't really use this a lot. But there if you need it.
+@import "grid"; // File. It's just a mixin. See file for documentation.
+@import "font-awesome"; // File. Font Awesome 3.0.2
+@import "magnific-popup"; // File. 
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+$white:#fff;
+$black:#000;
+$textColor: #222;
+$beige:#eaeae1;
+$dark-text:darken($beige, 70%);
+$light-text:darken($beige, 50%);
+$link-color:#ec6961;
+
+/* ==========================================================================
+	Misc Fixes
+	========================================================================== */
+
+img { vertical-align: middle;} //Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+textarea { resize: vertical; } //Allow only vertical resizing of textareas.
+
+// Make sure all text inputs larger for touch inputs. http://globalmoxie.com/blog/desktop-touch-design.shtml
+html.touch {
+	input[type="text"] {
+		min-height:44px;
+	}
+}
+
+/* ==========================================================================
+   Testing Utilities
+   ========================================================================== */
+body {
+	//@include clearfix;
+	// @include desktop-and-up { border-top: 2px solid red; }
+	// @include tablet-landscape-and-down { border-top: 2px solid green; }
+	// @include tablet-portrait-and-down { border-top: 2px solid yellow; }
+	// @include mobile-landscape-and-down { border-top: 2px solid orange; }
+}
+
+/* ==========================================================================
+   Base Typography
+   ========================================================================== */
+
+//@include font-face("junction", font-files("/fonts/Junction-webfont.woff", "/fonts/Junction-webfont.ttf", "/fonts/Junction-webfont.svg"));
+
+
+// Base Color
+html, button, input, select, textarea { color: #222; } // change to variable
+// Base font size and line height
+body { font-size: 1em; line-height: 1.4; }
+// Better looking hr's.
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+// Better selection style
+::-moz-selection { background: #b3d4fc; text-shadow: none; } // Declarations must be separate (h5bp.com/i)
+::selection { background: #b3d4fc; text-shadow: none; }
+* { @include box-sizing(border-box);} // Crazy, right? http://learnlayout.com/box-sizing.html
+// remove the default gray highlight
+html { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+// Basic Headings. I prefer to keep the styled off the h1 and h2 elements and relegate them to classes.
+h1 {
+	font-size: 2em; margin: 0.67em 0; font-weight:200;
+	// font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	//text-transform: uppercase;
+}
+h2 {
+	font-size: 1.5em; margin: 0.83em 0; font-weight:bold;
+}
+h3 {
+	font-size: 1.17em; margin: 1em 0; font-weight:bold;
+}
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+    //font-weight:normal;
+}
+[class*="heading"] { // Vertically center the icons when part of headings. Look good even if it wraps.
+	&[class*="has-icon"] { position:relative;}
+	> [class*="icon-"] { position:absolute; left:0; top:0; bottom:0; }
+	&.has-icon-large { padding-left:1.4em; padding-top:0; }
+	&.has-icon-2x { padding-left:2em; padding-top:0.35em; }
+	&.has-icon-3x { padding-left:3em; padding-top:0.8em;	}
+	&.has-icon-4x { padding-left:3.85em; padding-top:1.3em; }
+}
+
+
+
+/* ==========================================================================
+   Base Colors & Fonts
+   ========================================================================== */
+
+html, button, input, select, textarea {
+    color: $textColor;
+}
+body {
+	background:$beige;
+	//color:$light-text;
+	font-family: 'Source Sans Pro', sans-serif; //font-weight:200;
+}
+h1, h2, h3 {
+	//font-family: 'Bitter', serif;
+	font-weight:700;
+}
+a {
+	color:$link-color;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+/* ==========================================================================
+	Base Wrappers
+	========================================================================== */
+.content {
+	@include animation(fadeIn 2s);
+	.container h1 {
+		margin-top:4em;
+	}
+}
+.container {
+	margin:0 auto;
+	padding:3em 2em;
+	// @include mobile-landscape-and-up {
+	// 	max-width:$mq-mobile-landscape;
+	// }
+	max-width:820px;
+	// @include tablet-landscape-and-up {
+	// 	max-width:$mq-tablet-landscape;
+	// }
+	&.container-light {
+		background:lighten($beige, 30%);
+	}
+}
+footer {
+
+}
+
+/* ==========================================================================
+	PAGE: Index
+	========================================================================== */
+
+header {
+	@include background-image(linear-gradient(#3d3d3d, #505050));
+	width:100%; position:fixed; top:0; height:135px;
+	z-index:900;
+	.container {
+		position:relative;
+		padding:10px 0;
+		.dots {
+			position:relative;
+			height:1px; width:20%; margin:55px auto 0 auto;
+			border-bottom:2px dashed #656565;
+			//@include animate();
+			@include transition(width linear 2s);
+			.animate & {
+				width:80%;
+			}
+			.heart {
+				color:#656565;
+				text-align: center;
+				position:absolute; bottom:-20px; width:100%;
+				@include animation(bounceIn 1s);
+			}
+			@include tablet-portrait-only {
+				margin:30px auto 40px auto;
+			}
+			@include mobile-only {
+				display:none;
+			}
+		}
+		.mug {
+			height:100px; width:100px;
+			border:4px solid #fff;
+			@include border-radius(50px);
+			position:absolute; top:17px;
+			&.mug-left { 
+				left:20px; background:transparent url(/img/pco/me.jpg) left top no-repeat; background-size: 100%;
+				@include mobile-portrait-only {
+					left:5px; top:5px;
+					height:70px; width:70px;
+				}
+				@include animation(rotateInDownLeft 4s);
+			}
+			&.mug-right { 
+				right:20px; background:transparent url(/img/pco/pico.jpg) left top no-repeat; background-size: 100%;
+				@include mobile-only {
+					display:none;
+				}
+				@include animation(rotateInDownRight 4s);
+			}
+			@include tablet-portrait-only {
+				height:50px; width:50px;
+			}
+		}
+		.nav {
+			//font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+			@include animation(fadeIn 1s);
+			text-align: center;
+			margin:30px auto 0 auto; padding:0;
+			width:100%;
+			list-style-type: none;
+			@include mobile-only {
+				margin:.5em 0 0 0;
+				text-align: right;
+			}
+			li {
+				display:inline-block;
+				text-align: center; padding:0 10px; margin-bottom:1em;
+				a {
+					//font-weight: 200;
+					color:$beige;
+					text-decoration: none;
+					display:inline-block;
+					padding:.2em .5em;
+					@include border-radius(4px);
+					@include transition(all .5s);
+					&:hover {
+						background:#3d3d3d;
+						color:#fff;
+					}
+				}
+				@include mobile-only {
+					margin-bottom:.5em;
+					float:right; clear:right;
+				}
+			}
+		}
+	}
+}
+
+.callout {
+	background:#fff;
+	padding:2em;
+	margin: 2em;
+	@include mobile-only {
+		margin:0;
+		padding:2em 1em;
+		ul, ol, li {
+			margin-left:.2em;
+			padding-left:.2em;
+		}
+	}
+	font-family: Baskerville, "Times New Roman", Times, serif;
+	//font-family: Vollkorn, serif; font-style: italic;
+	font-size:1.2em;
+	@include box-shadow(1px 1px 1px darken($beige, 7%));
+	.soft {
+		font-size:.65em;
+	}
+}
+
+.intro {
+	margin-top:8em;
+}
+
+.centered {
+	text-align:center;
+}
+.soft {
+	@include opacity(.6);
+}
+
+.question {
+	color:$light-text;
+	font-weight:400;
+	font-size:1.4em;
+	margin-top:2em;
+	//border-bottom:1px solid darken($beige, 20%);
+}
+
+.answer {
+	//border-left:1px solid lighten($light-text, 40%);
+	//margin-left:1em; 
+	//padding:.2em 1em;
+	@include clearfix;
+	margin-bottom:7em;
+	img, a.modal-img {
+		float:left;
+		@extend .reset;
+		max-width:100%;
+		&.go-right {
+			float:right;
+			margin-left:1em;
+			&.width-60 {
+				width:60%;
+			}
+			&.width-30 {
+				width:30%;
+			}
+		}
+	}
+	.js-video {
+		border:4px solid #000;
+		@include border-radius(4px);
+	}
+	p.clear {
+		@include clearfix;
+	}
+}
+blockquote {
+	font-family: Baskerville, "Times New Roman", Times, serif;
+	//font-family: Vollkorn, serif;
+	font-style: italic;
+	font-size:1.3em;
+	text-align: center;
+}
+
+pre {
+	//background:red;
+	@extend .reset;
+	code {
+		//background:yellow;
+		padding:0 2em 1em 2em;
+		font-size:.85em;
+		@include border-radius(4px);
+	}
+}
+
+.pbj {
+	@include clearfix;
+	.step {
+		@include tablet-portrait-and-up {
+			width:20%;
+			margin-right:5%;
+			float:left;
+		}
+		text-align: center;
+		img {
+			max-width:100%;
+			@include border-radius(8px);
+		}
+		p {
+			font-size:3em; font-weight: 700;
+			@extend .reset;
+		}
+	}
+}
+
+.cols2 {
+	.col {
+		@include grid(2,1);
+		padding-right:1em;
+	}
+}
+
+.modal-img {
+	position:relative;
+	.overlay {
+		position:absolute; left:0; right:0; top:0;
+		height:100%;
+		background:rgba(0, 0, 0, .5);
+		text-align: center;
+		i {
+			@include opacity(.5);
+			position:relative; top:40%;
+			font-size:2.6em;
+			color:#fff;
+			@include text-shadow(0 0 20px #000);
+			@include transition(opacity .5s);
+		}
+		&:hover i {
+			@include opacity(1);
+		}
+	}
+}
+
+
+
+
+/* ==========================================================================
+	Code highlighting
+	========================================================================== */
+/*
+
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+pre code {
+  display: block;
+  background: #3F3F3F;
+  color: #DCDCDC;
+}
+
+pre .keyword,
+pre .tag,
+pre .css .class,
+pre .css .id,
+pre .lisp .title,
+pre .nginx .title,
+pre .request,
+pre .status,
+pre .clojure .attribute {
+  color: #E3CEAB;
+}
+
+pre .django .template_tag,
+pre .django .variable,
+pre .django .filter .argument {
+  color: #DCDCDC;
+}
+
+pre .number,
+pre .date {
+  color: #8CD0D3;
+}
+
+pre .dos .envvar,
+pre .dos .stream,
+pre .variable,
+pre .apache .sqbracket {
+  color: #EFDCBC;
+}
+
+pre .dos .flow,
+pre .diff .change,
+pre .python .exception,
+pre .python .built_in,
+pre .literal,
+pre .tex .special {
+  color: #EFEFAF;
+}
+
+pre .diff .chunk,
+pre .subst {
+  color: #8F8F8F;
+}
+
+pre .dos .keyword,
+pre .python .decorator,
+pre .title,
+pre .haskell .type,
+pre .diff .header,
+pre .ruby .class .parent,
+pre .apache .tag,
+pre .nginx .built_in,
+pre .tex .command,
+pre .prompt {
+    color: #efef8f;
+}
+
+pre .dos .winutils,
+pre .ruby .symbol,
+pre .ruby .symbol .string,
+pre .ruby .string {
+  color: #DCA3A3;
+}
+
+pre .diff .deletion,
+pre .string,
+pre .tag .value,
+pre .preprocessor,
+pre .built_in,
+pre .sql .aggregate,
+pre .javadoc,
+pre .smalltalk .class,
+pre .smalltalk .localvars,
+pre .smalltalk .array,
+pre .css .rules .value,
+pre .attr_selector,
+pre .pseudo,
+pre .apache .cbracket,
+pre .tex .formula,
+pre .coffeescript .attribute {
+  color: #CC9393;
+}
+
+pre .shebang,
+pre .diff .addition,
+pre .comment,
+pre .java .annotation,
+pre .template_comment,
+pre .pi,
+pre .doctype {
+  color: #7F9F7F;
+}
+
+pre .coffeescript .javascript,
+pre .javascript .xml,
+pre .tex .formula,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .xml .css,
+pre .xml .cdata {
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+	Print Styles
+	========================================================================== */
+@import "print";

@@ -1,0 +1,196 @@
+@import "compass"; // Gem. Compass 0.12.2 (06/24/2012)
+@import "animation"; // Gem. https://github.com/ericam/compass-animation For Compass v <= 0.12
+@import "animation/animate"; // Gem. Required by animation.
+@import "normalize"; // File. normalize.css v1.1.0, modified to remove IE67 hacks.
+@import "utilities"; // File. Utility classes from HTML5BP, custom utility classes, and SASS mixins.
+@import "media-queries"; // File. Don't really use this a lot. But there if you need it.
+@import "grid"; // File. It's just a mixin. See file for documentation.
+@import "font-awesome"; // File. Font Awesome 3.0.2
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+$white:#fff;
+$black:#000;
+$textColor: #222;
+$beige:#eaeae1;
+$dark-text:darken($beige, 70%);
+$light-text:darken($beige, 50%);
+$link-color:#ec6961;
+
+/* ==========================================================================
+	Misc Fixes
+	========================================================================== */
+
+img { vertical-align: middle;} //Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+textarea { resize: vertical; } //Allow only vertical resizing of textareas.
+
+// Make sure all text inputs larger for touch inputs. http://globalmoxie.com/blog/desktop-touch-design.shtml
+html.touch {
+	input[type="text"] {
+		min-height:44px;
+	}
+}
+
+/* ==========================================================================
+   Testing Utilities
+   ========================================================================== */
+body {
+	@include desktop-and-up { border-top: 2px solid red; }
+	@include tablet-landscape-and-down { border-top: 2px solid green; }
+	@include tablet-portrait-and-down { border-top: 2px solid yellow; }
+	@include mobile-landscape-and-down { border-top: 2px solid orange; }
+}
+
+/* ==========================================================================
+   Base Typography
+   ========================================================================== */
+
+// Base Color
+html, button, input, select, textarea { color: #222; } // change to variable
+// Base font size and line height
+body { font-size: 1em; line-height: 1.4; }
+// Better looking hr's.
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+// Better selection style
+::-moz-selection { background: #b3d4fc; text-shadow: none; } // Declarations must be separate (h5bp.com/i)
+::selection { background: #b3d4fc; text-shadow: none; }
+* { @include box-sizing(border-box);} // Crazy, right? http://learnlayout.com/box-sizing.html
+// remove the default gray highlight
+html { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+// Basic Headings. I prefer to keep the styled off the h1 and h2 elements and relegate them to classes.
+.heading1 {
+	font-size: 2em; margin: 0.67em 0; font-weight:bold;
+}
+.heading2 {
+	font-size: 1.5em; margin: 0.83em 0; font-weight:bold;
+}
+.heading3 {
+	font-size: 1.17em; margin: 1em 0; font-weight:bold;
+}
+.heading4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+    font-weight:bold;
+}
+[class*="heading"] { // Vertically center the icons when part of headings. Look good even if it wraps.
+	&[class*="has-icon"] { position:relative;}
+	> [class*="icon-"] { position:absolute; left:0; top:0; bottom:0; }
+	&.has-icon-large { padding-left:1.4em; padding-top:0; }
+	&.has-icon-2x { padding-left:2em; padding-top:0.35em; }
+	&.has-icon-3x { padding-left:3em; padding-top:0.8em;	}
+	&.has-icon-4x { padding-left:3.85em; padding-top:1.3em; }
+}
+
+
+
+/* ==========================================================================
+   Base Colors
+   ========================================================================== */
+
+html, button, input, select, textarea {
+    color: $textColor;
+}
+
+/* ==========================================================================
+	Base Wrappers
+	========================================================================== */
+
+.container {
+	margin:0 auto;
+	// @include mobile-landscape-and-up {
+	// 	max-width:$mq-mobile-landscape;
+	// }
+	@include tablet-portrait-and-up {
+		max-width:$mq-tablet-portrait;
+	}
+	@include tablet-landscape-and-up {
+		max-width:$mq-tablet-landscape;
+	}
+}
+footer {
+
+}
+
+/* ==========================================================================
+	SHARED: Navigation
+	========================================================================== */
+.main-nav {
+	@include horizontal-list;
+}
+
+/* ==========================================================================
+	PAGE: Index
+	========================================================================== */
+
+div[class*="col"], div[class*=" col"]{
+	@include clearfix;
+	background:#efefef;
+	padding:10px;
+	p {
+		background:#999;
+	}
+}
+
+.some-group-of-cols {
+	> .col {
+		@include grid(3,1, true); // That would make 1/3 columns in reverse order.
+	}
+}
+
+.some-group-of-uneven-cols {
+	// For mobile, we'll leave them 100%. But for the rest...
+	@include tablet-portrait-and-up {
+		.col1 {
+			@include grid(12,2);
+		}
+		.col2 {
+			@include grid(12,4);
+		}
+		.col3 {
+			@include grid(12,6);
+		}
+	}
+}
+.one-50percent-col {
+	@include clearfix;
+	div {
+		text-align:center;
+		@include tablet-portrait-and-up {
+			@include grid(2,1);
+			margin:0 auto;
+			float:none;
+		}
+	}
+}
+
+.cause-wrap {
+	@include clearfix;
+	div {
+		@include grid(5,2);
+	}
+}
+
+.bullets-test {
+	@include no-bullets;
+}
+
+
+/* ==========================================================================
+	Base Forms
+	========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+	Print Styles
+	========================================================================== */
+@import "print";
