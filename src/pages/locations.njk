@@ -1,0 +1,75 @@
+---
+layout: layouts/page.njk
+title: Training Locations
+permalink: /locations/
+---
+
+<!-- Hero Section -->
+<section class="relative h-[400px] flex items-center justify-center text-center" style="background: linear-gradient(rgba(106, 134, 90, 0.85), rgba(106, 134, 90, 0.85)), url('/img/hero-lessons.jpg') center/cover;">
+  <div class="relative z-10 max-w-4xl mx-auto px-4">
+    <h1 class="text-5xl font-bold text-white">Training Locations</h1>
+  </div>
+</section>
+
+<!-- Info Box -->
+<section class="bg-[color:var(--color-primary-green)] text-white py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-start">
+      <div class="flex-shrink-0 mr-4">
+        <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f3de.svg" alt="Park" class="w-12 h-12">
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-3">Dog training in public spaces</h3>
+        <p class="mb-3">
+          Where we meet depends on what we're working on, weather, park availability, and other factors. While in these areas we'll need to be mindful of others and respectful of the space itself. That means cleaning up poop, preventing digging, and staying on leash in most situations. Expect possible dog interactions and the occasional need to relocate. <strong>You</strong> are responsible for your dog – their safety, their health, and their actions.
+        </p>
+        <p class="text-sm">
+          <strong>Bring:</strong> ☑️ Poop bags ☑️ Water & bowl ☑️ 6ft leash ☑️ 20+ ft long line
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location Cards -->
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    {% for location in locations %}
+    <div class="location-card">
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Map -->
+        <div class="iframe-container">
+          <iframe
+            src="{{ location.mapEmbed }}"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map of {{ location.name }}">
+          </iframe>
+        </div>
+
+        <!-- Info -->
+        <div class="p-6">
+          <h2 class="text-2xl font-bold mb-3" style="color: var(--color-primary-green)">
+            {{ location.name }}: {{ location.city }}
+          </h2>
+          <p class="text-gray-700 mb-4">{{ location.description }}</p>
+          <p class="text-sm text-gray-600 mb-4">{{ location.address }}</p>
+
+          <!-- Map Buttons -->
+          <div class="flex gap-3">
+            <a href="{{ location.appleMapsUrl }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+              <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f5fa.svg" alt="Map" class="w-5 h-5">
+              <span class="font-medium">Apple Maps</span>
+            </a>
+            <a href="{{ location.googleMapsUrl }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+              <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f30e.svg" alt="Globe" class="w-5 h-5">
+              <span class="font-medium">Google Maps</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

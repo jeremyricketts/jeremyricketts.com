@@ -1,0 +1,65 @@
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-3">
+        <img src="/img/logo.svg" alt="Jeremy Ricketts Dog Training" class="h-12 w-12">
+        <span class="text-xl font-bold" style="color: var(--color-primary-green)">Jeremy Ricketts<br><span class="text-base font-normal">Dog Training</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex space-x-8">
+        {% for item in navigation %}
+        <li>
+          <a
+            href="{{ item.url }}"
+            class="{% if page.url == item.url %}font-semibold{% else %}font-medium{% endif %} hover:text-[color:var(--color-primary-green)] transition-colors"
+            style="{% if page.url == item.url %}color: var(--color-primary-green){% endif %}"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <ul class="space-y-2">
+        {% for item in navigation %}
+        <li>
+          <a
+            href="{{ item.url }}"
+            class="block py-2 px-4 rounded-md {% if page.url == item.url %}bg-[color:var(--color-primary-green)] text-white font-semibold{% else %}hover:bg-gray-100{% endif %} transition-colors"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    button.addEventListener('click', function() {
+      menu.classList.toggle('hidden');
+    });
+  });
+</script>

@@ -1,0 +1,18 @@
+{
+  "name": "jeremyricketts-dog-training",
+  "version": "1.0.0",
+  "description": "Dog training business website built with 11ty and Tailwind CSS",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": ["11ty", "eleventy", "tailwind", "static-site"],
+  "author": "Jeremy Ricketts",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.0.0"
+  }
+}

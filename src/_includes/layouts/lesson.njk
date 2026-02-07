@@ -1,0 +1,30 @@
+---
+layout: layouts/page.njk
+---
+
+<!-- Lesson Header with Navigation -->
+<section class="bg-[color:var(--color-primary-green)] py-8">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex-1">
+        {% if prevLesson %}
+        <a href="{{ prevLesson }}" class="text-white hover:text-gray-200 text-2xl">&larr;</a>
+        {% endif %}
+      </div>
+      <div class="text-center flex-1">
+        <p class="text-white text-sm uppercase tracking-wider mb-2">Lesson {{ lessonNumber }}</p>
+      </div>
+      <div class="flex-1 text-right">
+        {% if nextLesson %}
+        <a href="{{ nextLesson }}" class="text-white hover:text-gray-200 text-2xl">&rarr;</a>
+        {% endif %}
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold text-white text-center">{{ title }}</h1>
+  </div>
+</section>
+
+<!-- Lesson Content -->
+<article class="max-w-4xl mx-auto px-4 py-12">
+  {{ content | safe }}
+</article>

@@ -1,0 +1,58 @@
+[
+  {
+    "number": 1,
+    "title": "Markers, Rewards, and Eye Contact",
+    "description": "Here, we're building the foundation for things to come. I'll show you how to condition your dog to a \"marker\" and then we'll use that marker to teach them that eye contact is rewarding.",
+    "image": "/img/lessons/lesson-1.jpg",
+    "url": "/lesson/1/"
+  },
+  {
+    "number": 2,
+    "title": "Luring and Heeling Foundations",
+    "description": "This lesson is all about body position. We're teaching your dog that when they follow their nose and pull up to your side that good things happen.",
+    "image": "/img/lessons/lesson-2.jpg",
+    "url": "/lesson/2/"
+  },
+  {
+    "number": 3,
+    "title": "Leash Queues and the Platform",
+    "description": "In this lesson we're introducing two new things: the leash and the raised platform. We'll use markers, rewards, and luring to teach them the language of the leash as we move around and on top of the platform.",
+    "image": "/img/lessons/lesson-3.jpg",
+    "url": "/lesson/3/"
+  },
+  {
+    "number": 4,
+    "title": "The Place Command",
+    "description": "In this lesson we'll teach your dog how to get onto a raised platform on their own with the <em>place</em> command. We'll teach this new skill using the 3 phases of learning: Performing, Pairing, and Proofing.",
+    "image": "/img/lessons/lesson-4.jpg",
+    "url": "/lesson/4/"
+  },
+  {
+    "number": 5,
+    "title": "Implied Stay and Free",
+    "description": "In this lesson teach your dog that when we ask them to \"place\" or \"sit\" or \"down\" then we <em>also</em> want them to stay. To teach these <em>sustained</em> behaviors we'll teach them a couple new markers and a release word: \"free\".",
+    "image": "/img/lessons/lesson-5.jpg",
+    "url": "/lesson/5/"
+  },
+  {
+    "number": 6,
+    "title": "Loose Leash Walking",
+    "description": "At this stage your dog understands the language of the leash and has learned that sticking by your side is rewarding. Now we'll transition from suggesting it to <em>requiring</em> it.",
+    "image": "/img/lessons/lesson-6.jpg",
+    "url": "/lesson/6/"
+  },
+  {
+    "number": 7,
+    "title": "Off and Leave-It",
+    "description": "In this lesson we're finally introducing the concept of active corrections. We'll practice our skills from previous lessons to keep it light and fun. But we'll also set up scenarios that let us teach these critical and potentially life-saving skills.",
+    "image": "/img/lessons/lesson-7.jpg",
+    "url": "/lesson/7/"
+  },
+  {
+    "number": 8,
+    "title": "Recall (Come When Called)",
+    "description": "This is the single most important skill your dog will learn in their life and one you'll practice tens of thousands of times with them. A dog with solid recall is one that you can adventure with and trust in all kinds of scenarios. Let's do it!",
+    "image": "/img/lessons/lesson-8.jpg",
+    "url": "/lesson/8/"
+  }
+]

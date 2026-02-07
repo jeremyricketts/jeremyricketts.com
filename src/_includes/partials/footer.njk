@@ -1,0 +1,64 @@
+<footer class="bg-gray-800 text-white py-12 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Menu Column -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Menu</h3>
+        <ul class="space-y-2">
+          {% for item in navigation %}
+          <li>
+            <a href="{{ item.url }}" class="text-gray-300 hover:text-white transition-colors">
+              {{ item.label }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Payment Column -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Payment Options</h3>
+        <ul class="space-y-2">
+          {% for method in footer.payment_methods %}
+          <li>
+            {% if method.url %}
+            <a href="{{ method.url }}" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">
+              {{ method.name }}
+            </a>
+            {% else %}
+            <span class="text-gray-300">{{ method.name }}</span>
+            {% if method.details %}
+            <br><span class="text-sm text-gray-400">{{ method.details }}</span>
+            {% endif %}
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Resources</h3>
+        <ul class="space-y-2">
+          {% for resource in footer.resources %}
+          <li>
+            <a href="{{ resource.url }}" class="text-gray-300 hover:text-white transition-colors">
+              {{ resource.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Logo and Copyright -->
+    <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center space-x-3 mb-4 md:mb-0">
+        <img src="/img/logo.svg" alt="Jeremy Ricketts Dog Training" class="h-10 w-10">
+        <span class="text-lg font-bold">Jeremy Ricketts Dog Training</span>
+      </div>
+      <p class="text-gray-400 text-sm">{{ footer.copyright }}</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Simmons Family Park",
+    "city": "San Marcos",
+    "description": "Excellent neighborhood park at the top of a hill. Enter the park from the parking lot and walk your dog on sidewalk the loop. There's another small field in the south westerly part of this park where I set up. Some shade, bathrooms, and water available.",
+    "address": "2180 Rocky Point Way, San Marcos, CA 92078",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.8!2d-117.224040!3d33.123651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf0e0e0e0e0e0%3A0x51e0e0e0e0e0e0e0!2sSimmons%20Family%20Park!5e0!3m2!1sen!2sus!4v1234567890",
+    "appleMapsUrl": "https://maps.apple.com/?address=2180%20Rocky%20Point%20Way,%20San%20Marcos,%20CA%20%2092078,%20United%20States&auid=5903043162710992909&ll=33.123651,-117.224040&lsp=9902&q=Simmons%20Family%20Park",
+    "googleMapsUrl": "https://goo.gl/maps/Y8eNaPtiugjf94b67"
+  },
+  {
+    "name": "Bressi Ranch Gazebo Park",
+    "city": "Carlsbad",
+    "description": "A moderately busy neighborhood park next to the Boys & Girls Club. Visited by typically well behaved dogs but typically low traffic. Petco is just a block away too. Limited shade, no bathrooms, or water.",
+    "address": "2730 Bressi Ranch Way, Carlsbad, CA 92009",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.6!2d-117.254295!3d33.125865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc73c73c73c73c%3A0x73c73c73c73c73c7!2sBressi%20Ranch%20Gazebo%20Park!5e0!3m2!1sen!2sus!4v1234567890",
+    "appleMapsUrl": "https://maps.apple.com/?address=2730%20Bressi%20Ranch%20Way,%20Carlsbad,%20CA%20%2092009,%20United%20States&ll=33.125865,-117.254295&q=Bressi%20Ranch%20Gazebo%20Park",
+    "googleMapsUrl": "https://goo.gl/maps/rSEquWA7oSvk1a737"
+  },
+  {
+    "name": "Acacia Neighborhood Park",
+    "city": "San Marcos",
+    "description": "A low traffic but large park situated off W San Macros Blvd near Bressi Ranch. Park on Acacia Drive right when you pull into the neighborhood. Some shade, no bathrooms, no water.",
+    "address": "1996 Acorn Rd, San Marcos, CA 92078",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.3!2d-117.219099!3d33.131331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dbf0f0f0f0f0f0%3A0x51f0f0f0f0f0f0f0!2sAcacia%20Small%20Park!5e0!3m2!1sen!2sus!4v1234567890",
+    "appleMapsUrl": "https://maps.apple.com/?address=1996%20Acorn%20Rd,%20San%20Marcos,%20CA%20%2092078,%20United%20States&ll=33.131331,-117.219099&q=Acacia%20Small%20Park&t=m",
+    "googleMapsUrl": "https://goo.gl/maps/SBaDBAsMriQhD1FSA"
+  },
+  {
+    "name": "Magee Park",
+    "city": "Carlsbad",
+    "description": "The large lawn adjacent to the Army and Navy Academy provides some shade and access to public bathrooms nearby. NOTE: Dogs are not technically allowed here. I use this part as a meeting spot to walk into the Carlsbad Village to practice loose-leash walking.",
+    "address": "258 Beech Ave, Carlsbad, CA 92008",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.8!2d-117.354251!3d33.161181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc71c71c71c71c%3A0x4c71c71c71c71c71!2sMagee%20Park!5e0!3m2!1sen!2sus!4v1234567890",
+    "appleMapsUrl": "https://maps.apple.com/?address=258%20Beech%20Ave,%20Carlsbad,%20CA%20%2092008,%20United%20States&auid=5468468315720505598&ll=33.161181,-117.354251&lsp=9902&q=Magee%20Park",
+    "googleMapsUrl": "https://maps.app.goo.gl/XF6PLT22oQnHPdKQ8?g_st=ic"
+  },
+  {
+    "name": "Joseph Carrasco Park",
+    "city": "Oceanside",
+    "description": "A large grassy space not bordered by streets so better for off-leash work. Popular with locals so be ready for dog encounters. No shade, bathrooms, or water.",
+    "address": "2506 Skylark Dr, Oceanside, CA 92054",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3338.5!2d-117.341931!3d33.197356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0dc0dc0dc0dc%3A0x33dc0dc0dc0dc0dc!2sJoseph%20Carrasco%20Park!5e0!3m2!1sen!2sus!4v1234567890",
+    "appleMapsUrl": "https://maps.apple.com/?address=2461%20Skylark%20Dr,%20Oceanside,%20CA%20%2092054,%20United%20States&auid=3742225906967625111&ll=33.197356,-117.341931&lsp=9902&q=Joseph%20Carrasco%20Park",
+    "googleMapsUrl": "https://maps.app.goo.gl/FAG542s9ptfKGuxC6?g_st=ic"
+  },
+  {
+    "name": "Rancho del Oro Community Park",
+    "city": "Oceanside",
+    "description": "Large park with sports complexes. There's a grassy area north of the tennis courts that is typically available and less crowded. Alternatively there's a section just east of the tennis courts where we can train. Some shade, bathrooms, and water available.",
+    "address": "Rancho Del Oro Prk, Oceanside, CA 92056",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.2!2d-117.290423!3d33.223835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0ec0ec0ec0ec%3A0x76ec0ec0ec0ec0ec!2sRancho%20del%20Oro%20Community%20Park!5e0!3m2!1sen!2sus!4v1234567890",
+    "appleMapsUrl": "https://maps.apple.com/?address=Rancho%20Del%20Oro%20Prk,%20Oceanside,%20CA%2092056,%20United%20States&auid=2064042082349490265&ll=33.223835,-117.290423&lsp=9902&q=Rancho%20del%20Oro%20Community%20Park&t=m",
+    "googleMapsUrl": "https://goo.gl/maps/jj22cDH12RfKnsV49"
+  }
+]

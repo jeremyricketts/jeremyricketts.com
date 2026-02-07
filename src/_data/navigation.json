@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Home",
+    "url": "/"
+  },
+  {
+    "label": "Lessons",
+    "url": "/lessons/"
+  },
+  {
+    "label": "Locations",
+    "url": "/locations/"
+  },
+  {
+    "label": "Equipment",
+    "url": "/equipment/"
+  },
+  {
+    "label": "Booking & Contact",
+    "url": "/booking-contact/"
+  }
+]

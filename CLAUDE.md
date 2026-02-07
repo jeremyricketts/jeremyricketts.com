@@ -1,0 +1,130 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+This repository hosts **two separate websites**:
+
+1. **Dog Training Business Site** (main site at `/`) - A professional dog training business website for Jeremy Ricketts Dog Training, serving North County San Diego
+2. **Portfolio Site** (legacy, at `/pco/`) - Historical portfolio/job application site from 2013, preserved as-is
+
+## Architecture
+
+### Main Site: 11ty Static Site (Dog Training)
+
+**Technology Stack**:
+- **11ty (Eleventy)** v3.x - Static site generator
+- **Tailwind CSS** v4.x - Utility-first CSS framework (CSS-first configuration)
+- **Nunjucks** - Templating engine
+- **PostCSS** - CSS processing
+
+**Directory Structure**:
+```
+src/
+├── _includes/
+│   ├── layouts/
+│   │   ├── base.njk       # HTML shell with meta tags, fonts
+│   │   ├── page.njk       # Extends base, adds header + footer
+│   │   └── lesson.njk     # Extends page, for lesson detail pages
+│   └── partials/
+│       ├── header.njk     # Navigation bar
+│       └── footer.njk     # Site footer
+├── _data/
+│   ├── site.json          # Global site metadata
+│   ├── navigation.json    # Nav links
+│   ├── services.json      # Home page service cards
+│   ├── testimonials.json  # Customer testimonials
+│   ├── lessons.json       # Lesson summaries (for listing page)
+│   ├── locations.json     # Training locations with map data
+│   ├── footer.json        # Footer links and payment info
+│   └── equipment/         # Equipment recommendations by category
+│       ├── basics.json
+│       ├── puppy.json
+│       ├── other.json
+│       └── collars.json
+├── pages/
+│   ├── index.njk          # Home page
+│   ├── lessons.njk        # Lessons listing
+│   ├── locations.njk      # Training locations
+│   ├── equipment.njk      # Equipment recommendations
+│   └── booking-contact.njk # Contact and booking
+├── lesson/
+│   └── lesson-[1-8].njk   # Individual lesson detail pages
+├── css/
+│   └── style.css          # Tailwind directives + custom components
+└── img/                    # All site images
+
+_site/                      # Build output (gitignored)
+pco/                        # Legacy portfolio site (passthrough copied)
+```
+
+**Design System**:
+- Custom color palette defined in CSS (`src/css/style.css` using `@theme`)
+- Primary green: `#6a865a`
+- Accent green: `#66bb66`
+- Exercise green: `#29a329`
+- Tips yellow: `#fffbe0`
+- Fonts: Roboto (primary), Sriracha (tagline), Inter (testimonials)
+- Breakpoints: md (810px), lg (1200px)
+
+**Key Pages** (13 total):
+- Home: Hero, services grid, testimonials, cost/location/availability
+- Lessons: Listing of 8 skill-focused lessons
+- Lessons 1-8: Individual lesson detail pages with exercises, tips, homework
+- Locations: 6 training parks with Google Maps embeds
+- Equipment: 40+ product recommendations in 4 categories
+- Booking & Contact: Intake form modal, contact info, Calendly embed
+
+## Development
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server with watch mode
+npm start
+# Site available at http://localhost:8080
+
+# Build for production
+npm run build
+```
+
+### Making Changes
+
+**Content Updates**: All content is in JSON files (`src/_data/`) or Nunjucks templates (`src/pages/`, `src/lesson/`). No database required.
+
+**Styling**: Use Tailwind utility classes in templates. Custom components are defined in `src/css/style.css`. The Tailwind config uses CSS-first configuration with `@theme` directive.
+
+**Adding New Pages**: Create `.njk` file in `src/pages/` with front matter specifying layout and permalink.
+
+**Images**: Place in `src/img/` subdirectories. They're copied to `_site/img/` during build.
+
+### Deployment
+
+**GitHub Pages**: Automated via GitHub Actions (`.github/workflows/deploy.yml`)
+- Triggers on push to `master` branch
+- Runs `npm ci` and `npm run build`
+- Deploys `_site/` directory to GitHub Pages
+- Site available at `jeremyricketts.com`
+
+**CNAME**: The `CNAME` file at root ensures custom domain works with GitHub Pages.
+
+**Legacy Site**: The `/pco/` directory is passthrough-copied to `_site/pco/` via 11ty config, preserving the old portfolio site at `jeremyricketts.com/pco/`.
+
+## Important Notes
+
+**Two Sites in One Repo**: The main site (11ty) and legacy portfolio (`/pco/`) coexist. Never modify `/pco/` - it's a historical artifact.
+
+**External Dependencies**:
+- Twemoji CDN for emoji icons (service cards, UI elements)
+- Google Fonts for Roboto, Sriracha, Inter
+- Calendly embed for booking widget
+- Formspark for contact form submissions
+- Amazon/external links for equipment product images
+
+**No Client-Side JavaScript**: The site is entirely static HTML/CSS. Only JavaScript is the mobile menu toggle in the header partial.
+
+**Content Philosophy**: Content is king. All text is in templates or JSON for easy updates by non-developers via Claude Code.

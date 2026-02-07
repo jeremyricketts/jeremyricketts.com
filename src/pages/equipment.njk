@@ -1,0 +1,159 @@
+---
+layout: layouts/page.njk
+title: Equipment Recommendations
+permalink: /equipment/
+---
+
+<!-- Hero Section -->
+<section class="relative h-[300px] flex items-center justify-center text-center" style="background: linear-gradient(rgba(106, 134, 90, 0.85), rgba(106, 134, 90, 0.85)), url('/img/hero-lessons.jpg') center/cover;">
+  <div class="relative z-10 max-w-4xl mx-auto px-4">
+    <h1 class="text-5xl font-bold text-white">Equipment</h1>
+  </div>
+</section>
+
+<!-- Anchor Navigation -->
+<section class="bg-white sticky top-20 z-40 shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 py-4">
+    <nav class="flex justify-center gap-6 flex-wrap">
+      <a href="#basics" class="font-medium hover:text-[color:var(--color-primary-green)] transition-colors">The Basics</a>
+      <a href="#puppy" class="font-medium hover:text-[color:var(--color-primary-green)] transition-colors">Puppy Stuff</a>
+      <a href="#other" class="font-medium hover:text-[color:var(--color-primary-green)] transition-colors">Other Training Equipment</a>
+      <a href="#collars" class="font-medium hover:text-[color:var(--color-primary-green)] transition-colors">Training Collars</a>
+    </nav>
+  </div>
+</section>
+
+<!-- Disclaimer -->
+<section class="bg-gray-50 py-8">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <p class="text-lg text-gray-700">
+      These are <strong>not</strong> affiliate links. Almost all this stuff can be found at your local pet store. When I recommend a tool it's because I believe it will help you–not because I'm selling it.
+    </p>
+  </div>
+</section>
+
+<!-- The Basics -->
+<section id="basics" class="py-16">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-4" style="color: var(--color-primary-green)">The Basics</h2>
+    <p class="text-lg text-gray-700 mb-12">
+      Don't get too hung up on the specific makes and models of any of these items, except perhaps the recall whistle. Unless you want your dog to run to you watch a sports game on TV. 😜
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for item in equipment.basics %}
+      <div class="product-card">
+        {% if item.image %}
+        <img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+        {% endif %}
+        <div class="product-card-content">
+          <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-green)">{{ item.name }}</h3>
+          <p class="text-gray-700 text-sm mb-4">{{ item.description | safe }}</p>
+          {% if item.link %}
+          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-[color:var(--color-accent-green)] hover:underline">
+            View Product →
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Puppy Stuff -->
+<section id="puppy" class="bg-gray-50 py-16">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-4" style="color: var(--color-primary-green)">Puppy Stuff</h2>
+    <p class="text-lg text-gray-700 mb-12">
+      Look, most puppies are tough to live with and no magical piece of equipment is going to solve that. Still, there are a few things most puppies will need.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for item in equipment.puppy %}
+      <div class="product-card">
+        {% if item.image %}
+        <img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+        {% endif %}
+        <div class="product-card-content">
+          <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-green)">{{ item.name }}</h3>
+          <p class="text-gray-700 text-sm mb-4">{{ item.description | safe }}</p>
+          {% if item.link %}
+          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-[color:var(--color-accent-green)] hover:underline">
+            View Product →
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Other Training Equipment -->
+<section id="other" class="py-16">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-4" style="color: var(--color-primary-green)">Other Training Equipment</h2>
+    <p class="text-lg text-gray-700 mb-12">
+      This is a somewhat random assortment of links that I find myself sending to people after training sessions. A few things like the remote collar and the Cato board have specific uses that you'll want to get training on before you run out and buy them.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for item in equipment.other %}
+      <div class="product-card">
+        {% if item.image %}
+        <img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+        {% endif %}
+        <div class="product-card-content">
+          <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-green)">{{ item.name }}</h3>
+          <p class="text-gray-700 text-sm mb-4">{{ item.description | safe }}</p>
+          {% if item.link %}
+          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-[color:var(--color-accent-green)] hover:underline">
+            View Product →
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Training Collars -->
+<section id="collars" class="bg-gray-50 py-16">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-4" style="color: var(--color-primary-green)">Training Collars</h2>
+
+    <!-- Warning Box -->
+    <div class="bg-tips-yellow border-l-4 border-[color:var(--color-accent-green)] p-6 mb-8 rounded flex gap-4">
+      <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" alt="Warning" class="w-12 h-12 flex-shrink-0">
+      <div>
+        <p class="text-gray-800 mb-3">
+          For these tools to work effectively and humanely you need <strong>training</strong> on their usage. They must be the correct <strong>size</strong>, they must be fitted <strong>properly</strong>, and they must be <strong>introduced</strong> with care and intention.
+        </p>
+        <p class="text-gray-800">
+          When these collars go tight they distribute pressure more evenly around the neck in a way that feels totally new to the dog. For dogs that pull, this new feeling gives us a chance to reset the rules of the leash. On the mild end is the simple Martingale collar which makes an attention-getting "shink" sound when activated. The other end of the spectrum is the prong collar. However, <strong>none of these tools are likely to work</strong> if you simply slap one of these collars on your dog and expect results without training. Many dogs gradually start to pull again as they build up a tolerance to the discomfort of pulling while wearing a training collar. Then you're right back to where you started and you've possibly damaged your relationship with your dog.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for item in equipment.collars %}
+      <div class="product-card">
+        {% if item.image %}
+        <img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+        {% endif %}
+        <div class="product-card-content">
+          <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-green)">{{ item.name }}</h3>
+          <p class="text-gray-700 text-sm mb-4">{{ item.description | safe }}</p>
+          {% if item.link %}
+          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-[color:var(--color-accent-green)] hover:underline">
+            View Product →
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

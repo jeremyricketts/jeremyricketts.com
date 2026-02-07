@@ -1,0 +1,34 @@
+{
+  "payment_methods": [
+    {
+      "name": "Venmo",
+      "url": "https://venmo.com/jeremyricketts",
+      "icon": "payment"
+    },
+    {
+      "name": "PayPal",
+      "url": "https://paypal.me/jeremyricketts",
+      "icon": "payment"
+    },
+    {
+      "name": "Zelle",
+      "details": "(408) 691-6249",
+      "icon": "payment"
+    }
+  ],
+  "resources": [
+    {
+      "name": "Equipment Recommendations",
+      "url": "/equipment/"
+    },
+    {
+      "name": "Training Locations",
+      "url": "/locations/"
+    },
+    {
+      "name": "Lesson Curriculum",
+      "url": "/lessons/"
+    }
+  ],
+  "copyright": "© 2026 Jeremy Ricketts Dog Training"
+}

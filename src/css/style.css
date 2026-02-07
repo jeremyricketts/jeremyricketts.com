@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* Custom design tokens using Tailwind v4 CSS-first config */
+@theme {
+  --color-primary-green: #6a865a;
+  --color-accent-green: #66bb66;
+  --color-exercise-green: #29a329;
+  --color-dark-gray: #555;
+  --color-tips-yellow: #fffbe0;
+  --color-lesson-intro: #d6e2d0;
+
+  --font-family-primary: Roboto, sans-serif;
+  --font-family-tagline: Sriracha, cursive;
+  --font-family-testimonial: Inter, sans-serif;
+
+  --breakpoint-md: 810px;
+  --breakpoint-lg: 1200px;
+}
+
+/* Custom component classes */
+
+.btn-primary {
+  background-color: var(--color-primary-green);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-green);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--color-primary-green);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-primary-green);
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary-green);
+  color: white;
+}
+
+.tips-box {
+  background-color: var(--color-tips-yellow);
+  border-left: 4px solid var(--color-accent-green);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.25rem;
+}
+
+.tips-box h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-dark-gray);
+}
+
+.tips-box ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.tips-box ul li {
+  margin-bottom: 0.5rem;
+}
+
+.exercise-section {
+  margin-bottom: 2rem;
+}
+
+.exercise-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-exercise-green);
+  margin-bottom: 1rem;
+}
+
+.exercise-section ol,
+.exercise-section ul {
+  margin-left: 1.5rem;
+}
+
+.exercise-section li {
+  margin-bottom: 0.75rem;
+}
+
+.exercise-section ol {
+  list-style-type: decimal;
+}
+
+.exercise-section ul {
+  list-style-type: disc;
+}
+
+.lesson-intro {
+  background-color: var(--color-lesson-intro);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.homework-section {
+  background-color: var(--color-dark-gray);
+  color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+.homework-section h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.product-card-content {
+  padding: 1rem;
+}
+
+.location-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+/* Page load animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive iframe containers */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
