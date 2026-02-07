@@ -11,6 +11,9 @@ module.exports = function(eleventyConfig) {
   // Watch CSS for changes (will be processed by Tailwind)
   eleventyConfig.addWatchTarget('src/css/');
 
+  // Watch template files to trigger CSS rebuild when classes change
+  eleventyConfig.addWatchTarget('src/**/*.njk');
+
   // Add CSS processing with PostCSS
   eleventyConfig.addTemplateFormats('css');
   eleventyConfig.addExtension('css', {

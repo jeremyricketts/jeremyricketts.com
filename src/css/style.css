@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Tell Tailwind which files to scan for classes */
+@source "../**/*.{html,njk,md}";
+
 /* Custom design tokens using Tailwind v4 CSS-first config */
 @theme {
   --color-primary-green: #6a865a;
