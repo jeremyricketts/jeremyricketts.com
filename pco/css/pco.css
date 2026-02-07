@@ -6768,8 +6768,8 @@ table {
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/fonts/fontawesome-webfont.eot?v=3.0.1");
-  src: url("/fonts/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("/fonts/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("/fonts/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  src: url("../fonts/fontawesome-webfont.eot?v=3.0.1");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -9120,7 +9120,7 @@ header .container .mug {
 /* line 182, ../sass/pco.scss */
 header .container .mug.mug-left {
   left: 20px;
-  background: transparent url(/img/pco/me.jpg) left top no-repeat;
+  background: transparent url(../img/me.jpg) left top no-repeat;
   background-size: 100%;
   -webkit-animation: rotateInDownLeft 4s;
   -moz-animation: rotateInDownLeft 4s;
@@ -9140,7 +9140,7 @@ header .container .mug.mug-left {
 /* line 190, ../sass/pco.scss */
 header .container .mug.mug-right {
   right: 20px;
-  background: transparent url(/img/pco/pico.jpg) left top no-repeat;
+  background: transparent url(../img/pico.jpg) left top no-repeat;
   background-size: 100%;
   -webkit-animation: rotateInDownRight 4s;
   -moz-animation: rotateInDownRight 4s;
