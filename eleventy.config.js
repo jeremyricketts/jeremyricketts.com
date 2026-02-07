@@ -1,4 +1,7 @@
 module.exports = function(eleventyConfig) {
+  // Disable git ignore to ensure all files are watched
+  eleventyConfig.setWatchJavaScriptDependencies(false);
+
   // Passthrough copy for images
   eleventyConfig.addPassthroughCopy('src/img');
 
@@ -13,6 +16,12 @@ module.exports = function(eleventyConfig) {
 
   // Watch template files to trigger CSS rebuild when classes change
   eleventyConfig.addWatchTarget('src/**/*.njk');
+
+  // Force rebuild on template changes
+  eleventyConfig.on('eleventy.before', async () => {
+    // Clear require cache to force CSS recompilation
+    delete require.cache[require.resolve('./src/css/style.css')];
+  });
 
   // Add CSS processing with PostCSS
   eleventyConfig.addTemplateFormats('css');
@@ -35,6 +44,13 @@ module.exports = function(eleventyConfig) {
       return async () => {
         return result.css;
       };
+    }
+  });
+
+  // Configure server to disable caching
+  eleventyConfig.setServerOptions({
+    headers: {
+      "Cache-Control": "no-cache, no-store, must-revalidate"
     }
   });
 
