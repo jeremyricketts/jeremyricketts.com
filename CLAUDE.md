@@ -102,6 +102,11 @@ npm run build
 
 **Images**: Place in `src/img/` subdirectories. They're copied to `_site/img/` during build.
 
+**Checking your changes**: When changes are made to the design, use the Playwright MCP to check your work and follow these steps:
+1. Make the code change
+2. Take a screenshot using the MCP (always use `type: "jpeg"` to keep file sizes small)
+3. Inspect the screenshot and evaluate whether the change was successful
+
 ### Deployment
 
 **GitHub Pages**: Automated via GitHub Actions (`.github/workflows/deploy.yml`)

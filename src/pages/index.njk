@@ -89,11 +89,11 @@ permalink: /
 <!-- Testimonials -->
 <section class="bg-gray-100 py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {% for testimonial in testimonials %}
       <div class="testimonial-card">
         <div class="flex items-start mb-4">
-          <img src="{{ testimonial.image }}" alt="{{ testimonial.name }}" class="w-16 h-16 rounded-full object-cover mr-4">
+          <img src="{{ testimonial.image }}" alt="{{ testimonial.name }}" class="w-24 h-24 rounded-full object-cover mr-4">
           <div>
             <h3 class="font-bold text-lg">{{ testimonial.name }}</h3>
             <p class="text-sm text-gray-600">{{ testimonial.location }}</p>

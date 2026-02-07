@@ -4,3 +4,7 @@ _site
 .icloud
 **/.icloud
 node_modules
+.log
+.playwright-mcp
+.claude
+network-requests.txt
