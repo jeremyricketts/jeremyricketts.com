@@ -156,7 +156,24 @@
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  padding: 2rem;
+}
+
+.testimonials-columns {
+  column-count: 1;
+  column-gap: 2rem;
+}
+
+@media (min-width: 810px) {
+  .testimonials-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .testimonials-columns {
+    column-count: 3;
+  }
 }
 
 /* Page load animations */

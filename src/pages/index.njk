@@ -88,11 +88,11 @@ permalink: /
 
 <!-- Testimonials -->
 <section class="bg-gray-100 py-16">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="max-w-7xl mx-auto px-12 sm:px-16 lg:px-24">
+    <div class="testimonials-columns">
       {% for testimonial in testimonials %}
-      <div class="testimonial-card">
-        <div class="flex items-start mb-4">
+      <div class="testimonial-card mb-8" style="break-inside: avoid;">
+        <div class="flex items-center mb-4">
           <img src="{{ testimonial.image }}" alt="{{ testimonial.name }}" class="w-24 h-24 rounded-full object-cover mr-4">
           <div>
             <h3 class="font-bold text-lg">{{ testimonial.name }}</h3>
@@ -105,4 +105,7 @@ permalink: /
     </div>
   </div>
 </section>
+
+<!-- Beach Dogs Image -->
+<img src="/img/beach-dogs.jpg" alt="Two dogs running on the beach" class="w-full object-cover">
 
