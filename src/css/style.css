@@ -176,6 +176,18 @@
   }
 }
 
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 810px) {
+  .steps-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;

@@ -86,7 +86,7 @@ npm install
 
 # Start dev server with watch mode
 npm start
-# Site available at http://localhost:8080
+# Site available at http://localhost:8081
 
 # Build for production
 npm run build
@@ -115,9 +115,9 @@ npm run build
 - Deploys `_site/` directory to GitHub Pages
 - Site available at `jeremyricketts.com`
 
-**CNAME**: The `CNAME` file at root ensures custom domain works with GitHub Pages.
-
 **Legacy Site**: The `/pco/` directory is passthrough-copied to `_site/pco/` via 11ty config, preserving the old portfolio site at `jeremyricketts.com/pco/`.
+
+**Use Chrome DevTools MCP**: For validating frontend and reviewing design, utilize the chrome-devtools MCP.
 
 ## Important Notes
 
@@ -132,4 +132,3 @@ npm run build
 
 **No Client-Side JavaScript**: The site is entirely static HTML/CSS. Only JavaScript is the mobile menu toggle in the header partial.
 
-**Content Philosophy**: Content is king. All text is in templates or JSON for easy updates by non-developers via Claude Code.
