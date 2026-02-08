@@ -4,20 +4,28 @@
       <!-- Logo -->
       <a href="/" class="flex items-center space-x-3">
         <img src="/img/logo.svg" alt="Jeremy Ricketts Dog Training" class="h-12 w-12">
-        <span class="text-xl font-bold" style="color: var(--color-primary-green)">Jeremy Ricketts<br><span class="text-base font-normal">Dog Training</span></span>
+        <span class="text-xl font-bold leading-tight text-gray-900">Jeremy Ricketts<br><span class="text-base font-normal">Dog Training</span></span>
       </a>
 
       <!-- Desktop Navigation -->
-      <ul class="hidden md:flex space-x-8">
+      <ul class="hidden md:flex items-center space-x-8">
         {% for item in navigation %}
         <li>
+          {% if item.label == "Booking & Contact" %}
           <a
             href="{{ item.url }}"
-            class="{% if page.url == item.url %}font-semibold{% else %}font-medium{% endif %} hover:text-[color:var(--color-primary-green)] transition-colors"
-            style="{% if page.url == item.url %}color: var(--color-primary-green){% endif %}"
+            class="text-white font-medium px-4 py-2 rounded-lg transition-colors" style="background-color: var(--color-dark-gray);"
           >
             {{ item.label }}
           </a>
+          {% else %}
+          <a
+            href="{{ item.url }}"
+            class="font-medium {% if page.url == item.url %}underline underline-offset-4{% endif %}"
+          >
+            {{ item.label }}
+          </a>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
