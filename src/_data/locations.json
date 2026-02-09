@@ -29,7 +29,8 @@
   {
     "name": "Magee Park",
     "city": "Carlsbad",
-    "description": "The large lawn adjacent to the Army and Navy Academy provides some shade and access to public bathrooms nearby. NOTE: Dogs are not technically allowed here. I use this part as a meeting spot to walk into the Carlsbad Village to practice loose-leash walking.",
+    "description": "The large lawn adjacent to the Army and Navy Academy provides some shade and access to public bathrooms nearby.",
+    "note": "NOTE: Dogs are not technically allowed here. I use this part as a meeting spot to walk into the Carlsbad Village to practice loose-leash walking.",
     "address": "258 Beech Ave, Carlsbad, CA 92008",
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.8!2d-117.354251!3d33.161181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc71c71c71c71c%3A0x4c71c71c71c71c71!2sMagee%20Park!5e0!3m2!1sen!2sus!4v1234567890",
     "appleMapsUrl": "https://maps.apple.com/?address=258%20Beech%20Ave,%20Carlsbad,%20CA%20%2092008,%20United%20States&auid=5468468315720505598&ll=33.161181,-117.354251&lsp=9902&q=Magee%20Park",

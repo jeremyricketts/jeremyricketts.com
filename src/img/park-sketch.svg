@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" fill="none" stroke="#6a865a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.25">
+  <!-- Rolling hills -->
+  <path d="M0 180 Q100 140 200 160 Q300 130 400 150 Q500 120 600 145 Q700 130 800 155 L800 200 L0 200Z" fill="#6a865a" stroke="none" opacity="0.3"/>
+  <path d="M0 190 Q150 160 300 175 Q450 150 600 170 Q700 155 800 170 L800 200 L0 200Z" fill="#6a865a" stroke="none" opacity="0.2"/>
+
+  <!-- Trees - left cluster -->
+  <line x1="80" y1="175" x2="80" y2="140"/>
+  <path d="M62 145 Q72 115 80 108 Q88 115 98 145" fill="none"/>
+  <path d="M65 155 Q73 128 80 120 Q87 128 95 155" fill="none"/>
+
+  <line x1="110" y1="170" x2="110" y2="125"/>
+  <path d="M88 132 Q100 95 110 85 Q120 95 132 132" fill="none"/>
+  <path d="M92 145 Q102 112 110 100 Q118 112 128 145" fill="none"/>
+
+  <line x1="55" y1="178" x2="55" y2="150"/>
+  <path d="M42 155 Q49 132 55 126 Q61 132 68 155" fill="none"/>
+
+  <!-- Trees - center -->
+  <line x1="350" y1="165" x2="350" y2="118"/>
+  <path d="M328 125 Q340 88 350 78 Q360 88 372 125" fill="none"/>
+  <path d="M332 140 Q342 108 350 95 Q358 108 368 140" fill="none"/>
+
+  <line x1="390" y1="160" x2="390" y2="120"/>
+  <path d="M372 127 Q382 95 390 86 Q398 95 408 127" fill="none"/>
+  <path d="M375 138 Q383 110 390 100 Q397 110 405 138" fill="none"/>
+
+  <!-- Trees - right cluster -->
+  <line x1="620" y1="162" x2="620" y2="115"/>
+  <path d="M600 122 Q611 85 620 75 Q629 85 640 122" fill="none"/>
+  <path d="M604 138 Q613 108 620 95 Q627 108 636 138" fill="none"/>
+
+  <line x1="660" y1="158" x2="660" y2="120"/>
+  <path d="M644 127 Q653 98 660 90 Q667 98 676 127" fill="none"/>
+
+  <line x1="700" y1="155" x2="700" y2="125"/>
+  <path d="M685 130 Q693 108 700 100 Q707 108 715 130" fill="none"/>
+  <path d="M688 142 Q694 118 700 112 Q706 118 712 142" fill="none"/>
+
+  <!-- Winding path -->
+  <path d="M0 195 Q80 185 160 190 Q260 178 360 185 Q460 175 560 182 Q660 172 800 180" stroke-width="2.5" opacity="0.5"/>
+
+  <!-- Small bushes -->
+  <path d="M200 178 Q208 168 216 178" fill="none"/>
+  <path d="M210 176 Q218 165 226 176" fill="none"/>
+  <path d="M480 172 Q488 162 496 172" fill="none"/>
+  <path d="M490 170 Q498 158 506 170" fill="none"/>
+  <path d="M750 160 Q756 152 762 160" fill="none"/>
+
+  <!-- Bench -->
+  <line x1="270" y1="178" x2="290" y2="178"/>
+  <line x1="273" y1="178" x2="273" y2="184"/>
+  <line x1="287" y1="178" x2="287" y2="184"/>
+  <line x1="270" y1="175" x2="270" y2="178"/>
+  <line x1="290" y1="175" x2="290" y2="178"/>
+
+  <!-- Birds -->
+  <path d="M180 60 Q185 54 190 58" fill="none" stroke-width="1"/>
+  <path d="M200 50 Q205 44 210 48" fill="none" stroke-width="1"/>
+  <path d="M520 45 Q525 39 530 43" fill="none" stroke-width="1"/>
+  <path d="M540 55 Q545 49 550 53" fill="none" stroke-width="1"/>
+
+  <!-- Sun rays hint -->
+  <circle cx="720" cy="35" r="18" stroke-width="1" opacity="0.6"/>
+  <line x1="720" y1="10" x2="720" y2="3" stroke-width="1" opacity="0.4"/>
+  <line x1="745" y1="35" x2="752" y2="35" stroke-width="1" opacity="0.4"/>
+  <line x1="738" y1="17" x2="743" y2="12" stroke-width="1" opacity="0.4"/>
+  <line x1="738" y1="53" x2="743" y2="58" stroke-width="1" opacity="0.4"/>
+  <line x1="702" y1="17" x2="697" y2="12" stroke-width="1" opacity="0.4"/>
+</svg>

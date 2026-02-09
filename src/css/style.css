@@ -148,8 +148,51 @@
 .location-card {
   background-color: white;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
   overflow: hidden;
+}
+
+.location-note {
+  color: #dc2626;
+}
+
+.bring-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+}
+
+.bring-list {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.bring-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.bring-check {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.locations-callout {
+  background-color: white;
+  background-image: url('/img/park-sketch.svg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+  border: 1px solid #e5e7eb;
+  border-left: 3px solid #6a865a;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem 3rem;
 }
 
 .testimonial-card {

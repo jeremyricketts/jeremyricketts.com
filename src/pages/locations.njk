@@ -5,34 +5,32 @@ permalink: /locations/
 ---
 
 <!-- Hero Section -->
-<section class="relative h-[400px] flex items-center justify-center text-center" style="background: linear-gradient(rgba(106, 134, 90, 0.85), rgba(106, 134, 90, 0.85)), url('/img/hero-lessons.jpg') center/cover;">
+<section class="relative h-[400px] flex items-center justify-center text-center" style="background: #526146 url('/img/hero-locations.jpg') center/cover;">
   <div class="relative z-10 max-w-4xl mx-auto px-4">
     <h1 class="text-5xl font-bold text-white">Training Locations</h1>
   </div>
 </section>
 
-<!-- Info Box -->
-<section class="bg-[color:var(--color-primary-green)] text-white py-8">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-start">
-      <div class="flex-shrink-0 mr-4">
-        <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f3de.svg" alt="Park" class="w-12 h-12">
-      </div>
-      <div>
-        <h3 class="text-xl font-bold mb-3">Dog training in public spaces</h3>
-        <p class="mb-3">
-          Where we meet depends on what we're working on, weather, park availability, and other factors. While in these areas we'll need to be mindful of others and respectful of the space itself. That means cleaning up poop, preventing digging, and staying on leash in most situations. Expect possible dog interactions and the occasional need to relocate. <strong>You</strong> are responsible for your dog – their safety, their health, and their actions.
-        </p>
-        <p class="text-sm">
-          <strong>Bring:</strong> ☑️ Poop bags ☑️ Water & bowl ☑️ 6ft leash ☑️ 20+ ft long line
-        </p>
+<!-- Location Cards -->
+<section class="py-16">
+  <!-- Info Callout -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="locations-callout">
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">Dog training in public spaces</h3>
+      <p class="text-sm text-gray-600 mb-3">
+        Where we meet depends on what we're working on, weather, park availability, and other factors. We'll be mindful of others and respectful of the space. That means cleaning up poop, preventing digging, and staying on leash in most situations. Expect possible dog interactions and the occasional need to relocate. <strong>You</strong> are responsible for your dog &ndash; their safety, their health, and their actions.
+      </p>
+      <div class="bring-row text-sm text-gray-600 mt-4">
+        <strong>Bring:</strong>
+        <span class="bring-list">
+          <span class="bring-item"><svg class="bring-check" viewBox="0 0 16 16" fill="none"><rect x="0.5" y="0.5" width="15" height="15" rx="3" stroke="#6a865a" stroke-width="1.5"/><path d="M4.5 8.5L7 11l4.5-5.5" stroke="#6a865a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Poop bags</span>
+          <span class="bring-item"><svg class="bring-check" viewBox="0 0 16 16" fill="none"><rect x="0.5" y="0.5" width="15" height="15" rx="3" stroke="#6a865a" stroke-width="1.5"/><path d="M4.5 8.5L7 11l4.5-5.5" stroke="#6a865a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Water &amp; bowl</span>
+          <span class="bring-item"><svg class="bring-check" viewBox="0 0 16 16" fill="none"><rect x="0.5" y="0.5" width="15" height="15" rx="3" stroke="#6a865a" stroke-width="1.5"/><path d="M4.5 8.5L7 11l4.5-5.5" stroke="#6a865a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>6ft leash</span>
+          <span class="bring-item"><svg class="bring-check" viewBox="0 0 16 16" fill="none"><rect x="0.5" y="0.5" width="15" height="15" rx="3" stroke="#6a865a" stroke-width="1.5"/><path d="M4.5 8.5L7 11l4.5-5.5" stroke="#6a865a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>20+ ft long line</span>
+        </span>
       </div>
     </div>
   </div>
-</section>
-
-<!-- Location Cards -->
-<section class="py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
     {% for location in locations %}
     <div class="location-card">
@@ -50,21 +48,24 @@ permalink: /locations/
 
         <!-- Info -->
         <div class="p-6">
-          <h2 class="text-2xl font-bold mb-3" style="color: var(--color-primary-green)">
+          <h2 class="text-2xl font-bold mb-3 text-gray-900">
             {{ location.name }}: {{ location.city }}
           </h2>
           <p class="text-gray-700 mb-4">{{ location.description }}</p>
+          {% if location.note %}
+            <p class="location-note mb-4">{{ location.note }}</p>
+          {% endif %}
           <p class="text-sm text-gray-600 mb-4">{{ location.address }}</p>
 
-          <!-- Map Buttons -->
-          <div class="flex gap-3">
-            <a href="{{ location.appleMapsUrl }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
-              <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f5fa.svg" alt="Map" class="w-5 h-5">
-              <span class="font-medium">Apple Maps</span>
+          <!-- Map Links -->
+          <div class="flex gap-6">
+            <a href="{{ location.appleMapsUrl }}" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 hover:opacity-75 transition-opacity">
+              <img src="/img/apple-maps-icon.svg" alt="Apple Maps" style="width:40px;height:40px;">
+              <span class="text-sm text-gray-700">Apple Maps</span>
             </a>
-            <a href="{{ location.googleMapsUrl }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
-              <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f30e.svg" alt="Globe" class="w-5 h-5">
-              <span class="font-medium">Google Maps</span>
+            <a href="{{ location.googleMapsUrl }}" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center gap-1 hover:opacity-75 transition-opacity">
+              <img src="/img/google-maps-icon.svg" alt="Google Maps" style="width:40px;height:40px;">
+              <span class="text-sm text-gray-700">Google Maps</span>
             </a>
           </div>
         </div>
