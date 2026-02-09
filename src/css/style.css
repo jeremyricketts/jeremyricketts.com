@@ -147,6 +147,13 @@
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+@media (max-width: 809px) {
+  .product-card-image {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
 .product-card-image:hover {
   box-shadow:
     rgba(0,0,0,0.12) 0px 4px 12px,
@@ -216,7 +223,7 @@
 .harness-warning {
   grid-column: 1 / -1;
   background: #777;
-  padding: 30px;
+  padding: 40px;
   position: relative;
 }
 
@@ -246,8 +253,7 @@
 }
 
 .harness-warning-images img {
-  flex: 1;
-  max-width: 50%;
+  width: calc(50% - 10px);
   border-radius: 4px;
 }
 
