@@ -4,57 +4,65 @@ title: Booking and Contact
 permalink: /booking-contact/
 ---
 
-<!-- Hero Section -->
-<section class="relative h-[400px] flex items-center justify-center text-center" style="background: linear-gradient(rgba(106, 134, 90, 0.85), rgba(106, 134, 90, 0.85)), url('/img/hero-lessons.jpg') center/cover;">
-  <div class="relative z-10 max-w-4xl mx-auto px-4">
-    <h1 class="text-5xl font-bold text-white">Booking & Contact Info</h1>
-  </div>
-</section>
+<!-- Hero + Intake wrapper (image extends behind both) -->
+<div class="relative" style="overflow: hidden;">
+  <img src="/img/hero-booking.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center">
 
-<!-- Intake Form CTA -->
-<section class="bg-gray-100 py-12">
-  <div class="max-w-2xl mx-auto px-4 text-center">
-    <p class="text-lg text-gray-700 mb-4">
-      If we've never trained before, please take a moment to tell me about yourself and your dog.
-    </p>
-    <button onclick="document.getElementById('intakeModal').showModal()" class="btn-primary">
-      Intake Form
-    </button>
-  </div>
-</section>
+  <!-- Hero Section -->
+  <section class="relative flex items-center justify-center text-center" style="height: 400px;">
+    <div class="absolute inset-0" style="background: radial-gradient(50% 50%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4">
+      <h1 class="text-5xl font-bold text-gray-800">Booking & Contact Info</h1>
+    </div>
+  </section>
+
+  <!-- Intake Form CTA (frosted glass over hero image) -->
+  <section class="relative" style="background-color: rgba(245, 246, 250, 0.91); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); padding: 20px 16px;">
+    <div class="max-w-3xl mx-auto flex items-center justify-center gap-6" style="flex-direction: row; text-align: left;">
+      <p style="font-family: 'Sriracha', cursive; color: #333; font-size: 20px;">
+        If we've never trained before, please take a moment to tell me about yourself and your dog.
+      </p>
+      <button onclick="document.getElementById('intakeModal').showModal()" style="flex-shrink: 0; background: white; font-weight: 700; font-size: 20px; cursor: pointer; color: #66bb66; border-radius: 8px; padding: 10px 35px; box-shadow: rgba(0,0,0,0.15) 0px 1px 1px -0.6px, rgba(0,0,0,0.14) 0px 2px 2px -1.25px, rgba(0,0,0,0.13) 0px 4px 4px -1.9px, rgba(0,0,0,0.12) 0px 7px 7px -2.5px, rgba(0,0,0,0.1) 0px 14px 14px -3.1px, rgba(0,0,0,0.05) 0px 30px 30px -3.75px;">
+        Intake Form
+      </button>
+    </div>
+  </section>
+</div>
 
 <!-- Contact Info -->
-<section class="py-16">
+<section class="py-12" style="background: white;">
   <div class="max-w-3xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-2" style="color: var(--color-primary-green)">{{ site.phone }}</h2>
-    <h2 class="text-3xl font-bold mb-8" style="color: var(--color-primary-green)">{{ site.email }}</h2>
+    <div class="flex justify-center items-baseline gap-4 mb-6 flex-wrap">
+      <h2 class="text-xl font-bold text-gray-800">{{ site.phone }}</h2>
+      <h2 class="text-xl font-bold text-gray-800">{{ site.email }}</h2>
+    </div>
 
     <div class="flex justify-center gap-4 mb-6">
-      <a href="sms:{{ site.phone }}" class="inline-flex items-center gap-2 btn-primary">
-        <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4f1.svg" alt="Phone" class="w-5 h-5">
+      <a href="sms:{{ site.phone }}" class="inline-flex items-center justify-center gap-2 text-white font-bold text-xl" style="background-color: #66bb66; border-radius: 8px; padding: 10px 15px; width: 160px; box-shadow: rgba(0,0,0,0.15) 0px 1px 1px -0.6px, rgba(0,0,0,0.14) 0px 2px 2px -1.25px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-5 h-5"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
         Text
       </a>
-      <a href="tel:{{ site.phone }}" class="inline-flex items-center gap-2 btn-primary">
-        <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4de.svg" alt="Call" class="w-5 h-5">
+      <a href="tel:{{ site.phone }}" class="inline-flex items-center justify-center gap-2 text-white font-bold text-xl" style="background-color: #66bb66; border-radius: 8px; padding: 10px 15px; width: 160px; box-shadow: rgba(0,0,0,0.15) 0px 1px 1px -0.6px, rgba(0,0,0,0.14) 0px 2px 2px -1.25px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-5 h-5"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         Call
       </a>
-      <a href="mailto:{{ site.email }}" class="inline-flex items-center gap-2 btn-primary">
-        <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e7.svg" alt="Email" class="w-5 h-5">
+      <a href="mailto:{{ site.email }}" class="inline-flex items-center justify-center gap-2 text-white font-bold text-xl" style="background-color: #66bb66; border-radius: 8px; padding: 10px 15px; width: 160px; box-shadow: rgba(0,0,0,0.15) 0px 1px 1px -0.6px, rgba(0,0,0,0.14) 0px 2px 2px -1.25px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-5 h-5"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         Email
       </a>
     </div>
 
-    <p class="text-gray-600">I'm perfectly comfortable texting if you are!</p>
+    <p class="text-gray-700">I'm perfectly comfortable texting if you are!</p>
   </div>
 </section>
 
 <!-- Calendly Booking -->
-<section class="bg-gray-50 py-16">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-8" style="color: var(--color-primary-green)">
+<section class="py-16" style="background-color: rgb(240, 241, 245);">
+  <div style="max-width: 1100px; margin: 0 auto; padding: 0 16px;">
+    <h2 class="text-center font-bold text-gray-800 mb-2" style="font-size: 38px;">
       Book a Sunday Morning Session:
     </h2>
-    <div class="iframe-container" style="padding-top: 75%; min-height: 600px;">
+    <div class="iframe-container calendly-container" style="padding-top: 65%;">
       <iframe
         src="{{ site.calendly_url }}"
         width="100%"
@@ -66,55 +74,104 @@ permalink: /booking-contact/
   </div>
 </section>
 
+<!-- Beach Dogs Photo -->
+<section class="w-full overflow-hidden" style="height: 450px;">
+  <img src="/img/beach-dogs-booking.jpg" alt="Dog at the beach" class="w-full h-full object-cover object-center">
+</section>
+
 <!-- Intake Form Modal -->
-<dialog id="intakeModal" class="rounded-lg shadow-2xl max-w-2xl w-full p-0 backdrop:bg-black backdrop:opacity-50">
-  <div class="bg-white rounded-lg">
-    <div class="flex justify-between items-center p-6 border-b">
-      <h3 class="text-2xl font-bold" style="color: var(--color-primary-green)">Intake Form</h3>
-      <button onclick="document.getElementById('intakeModal').close()" class="text-gray-500 hover:text-gray-700 text-3xl leading-none">
-        &times;
-      </button>
+<dialog id="intakeModal" style="max-width: 680px; width: calc(100% - 32px); padding: 0; border: none; border-radius: 12px; box-shadow: 0 25px 60px rgba(0,0,0,0.3); margin: auto;">
+  <div style="background: #dce8f5; border-radius: 12px; padding: 32px;">
+    <!-- Close button -->
+    <button onclick="document.getElementById('intakeModal').close()" style="position: absolute; top: 12px; right: 16px; background: none; border: none; font-size: 28px; color: #888; cursor: pointer; line-height: 1;">
+      &times;
+    </button>
+
+    <!-- Guidance bullets -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+      <div>
+        <h4 class="font-bold" style="color: #333; margin-bottom: 8px;">About You:</h4>
+        <ul style="list-style: disc; padding-left: 20px; color: #444; line-height: 1.8; font-size: 15px;">
+          <li>Phone number please!</li>
+          <li>Experience with dogs and training?</li>
+          <li>Special needs or personal mobility issues?</li>
+          <li>What's your main goal for your dog?</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold" style="color: #333; margin-bottom: 8px;">About Your Dog:</h4>
+        <ul style="list-style: disc; padding-left: 20px; color: #444; line-height: 1.8; font-size: 15px;">
+          <li>Name, Age, Breed</li>
+          <li>Any aggression, reactivity, or bite-history?</li>
+          <li>Food and/or toy motivated?</li>
+          <li>How long have you had them?</li>
+        </ul>
+      </div>
     </div>
 
-    <form action="https://submit-form.com/{{ site.formspark_id }}" method="POST" class="p-6">
-      <div class="space-y-4">
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[color:var(--color-primary-green)] focus:border-transparent"
-          >
-        </div>
-
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email *</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[color:var(--color-primary-green)] focus:border-transparent"
-          >
-        </div>
-
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">About you and your dog *</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            rows="6"
-            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[color:var(--color-primary-green)] focus:border-transparent"
-            placeholder="Tell me about your dog's age, breed, temperament, and what you'd like to work on..."></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary w-full">
-          Submit
-        </button>
+    <!-- Form -->
+    <form id="intakeForm" onsubmit="return false;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Your Name"
+          style="padding: 14px 16px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; background: white;"
+        >
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Your email"
+          style="padding: 14px 16px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; background: white;"
+        >
       </div>
+
+      <textarea
+        name="message"
+        required
+        rows="10"
+        placeholder="Message"
+        style="width: 100%; padding: 14px 16px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; background: white; resize: vertical; margin-bottom: 16px; box-sizing: border-box;"
+      ></textarea>
+
+      <button type="submit" id="intakeSubmitBtn" style="width: 100%; padding: 16px; background: #88bb66; color: white; font-weight: 700; font-size: 18px; border: none; border-radius: 8px; cursor: pointer;">
+        Send
+      </button>
     </form>
+
+    <script>
+      document.getElementById('intakeForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var form = e.target;
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        var btn = document.getElementById('intakeSubmitBtn');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        try {
+          var res = await fetch('https://submit-form.com/{{ site.formspark_id }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              name: form.name.value,
+              email: form.email.value,
+              message: form.message.value
+            })
+          });
+          if (res.ok) {
+            form.reset();
+            btn.textContent = 'Sent!';
+            setTimeout(function() { document.getElementById('intakeModal').close(); btn.textContent = 'Send'; btn.disabled = false; }, 2000);
+          } else {
+            btn.textContent = 'Error - try again';
+            btn.disabled = false;
+          }
+        } catch(err) {
+          btn.textContent = 'Error - try again';
+          btn.disabled = false;
+        }
+      });
+    </script>
   </div>
 </dialog>

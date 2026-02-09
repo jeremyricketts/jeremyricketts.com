@@ -1,6 +1,10 @@
 {
   "payment_links": [
     {
+      "name": "Apple Pay",
+      "url": null
+    },
+    {
       "name": "Paypal",
       "url": "https://www.paypal.me/jeremydgreat"
     },
@@ -13,14 +17,8 @@
       "url": "https://cash.app/$jeremyricketts"
     },
     {
-      "name": "Apple Pay",
-      "url": null,
-      "detail": "Use (951) 743-1224"
-    },
-    {
       "name": "Zelle",
-      "url": null,
-      "detail": "Use (951) 743-1224"
+      "url": null
     }
   ],
   "copyright": "\u00a9 2026 Jeremy Ricketts"

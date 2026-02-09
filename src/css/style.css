@@ -427,3 +427,19 @@
   height: 100%;
   border: 0;
 }
+
+/* Intake form modal backdrop */
+#intakeModal::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Calendly embed - taller when widget stacks, shorter when side-by-side */
+.calendly-container {
+  min-height: 1100px;
+}
+
+@media (min-width: 1000px) {
+  .calendly-container {
+    min-height: 700px;
+  }
+}
