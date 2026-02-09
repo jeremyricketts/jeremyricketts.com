@@ -1,31 +1,31 @@
 [
   {
     "name": "Martingale Collar",
-    "image": "https://m.media-amazon.com/images/I/71Gcs3YqeZL._AC_SL1500_.jpg",
+    "image": "/img/equipment/collars/martingale-collar.jpg",
     "description": "Make sure to get one that still has a buckle (many don't) and where the triangle part is metal (some are cloth).",
     "link": "https://www.amazon.com/dp/B07MFV1J9Z/"
   },
   {
     "name": "Slip Lead",
-    "image": "https://m.media-amazon.com/images/I/61p-t8N3oDL._AC_SL1001_.jpg",
+    "image": "/img/equipment/collars/slip-lead.jpg",
     "description": "Usually made of a slick robe and where one end has a metal ring that easily \"slips\" along. <a href=\"https://www.amazon.com/gp/product/B002HGALRC/\" target=\"_blank\" class=\"underline\">1/2\" thick</a> for large breeds. <a href=\"https://www.amazon.com/gp/product/B000LQ62ZK/\" target=\"_blank\" class=\"underline\">3/8\" thick</a> for small.",
     "link": "https://www.amazon.com/gp/product/B002HGALRC/"
   },
   {
     "name": "Slip Collar",
-    "image": "https://m.media-amazon.com/images/I/61DzQI8JLXL._AC_SL1500_.jpg",
+    "image": "/img/equipment/collars/slip-collar.png",
     "description": "If you want to try the slip lead but you prefer to use your own leash, here's a slip collar. Easy to clip on and off!",
     "link": "https://www.amazon.com/dp/B0BR78ZGLL"
   },
   {
     "name": "Starmark Collar",
-    "image": "https://m.media-amazon.com/images/I/71zyW5dMqoL._AC_SL1500_.jpg",
+    "image": "/img/equipment/collars/starmark-collar.jpg",
     "description": "These distribute pressure across a bunch of small, round-tip plastic triangles. For strong dogs with thin fur. Popular with Dobermanns.",
     "link": "https://www.amazon.com/StarMark-Training-Collar-Large-Black/dp/B000A6BD5K/"
   },
   {
     "name": "Herm Sprenger Prong Collar",
-    "image": "https://m.media-amazon.com/images/I/41UvH8PqiKL._AC_.jpg",
+    "image": "/img/equipment/collars/herm-sprenger-prong-collar.jpg",
     "description": "A prong collar can be a wonderful tool for some dogs… if you get the <strong>correct gauge</strong>, you know how to <strong>fit it properly,</strong> and you are <strong>trained</strong> on how to use it.",
     "link": "https://www.amazon.com/stores/page/55197EC1-4CA6-467A-9CFA-405DCFEF0D85"
   }

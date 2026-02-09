@@ -1,43 +1,43 @@
 [
   {
     "name": "Crate",
-    "image": "https://m.media-amazon.com/images/I/81OxMfej8CL._AC_SL1500_.jpg",
+    "image": "/img/equipment/puppy/crate.jpg",
     "description": "Wire or plastic, just make sure it's small enough. For fast-growing large breeds get one with a divider.",
     "link": "https://www.amazon.com/gp/product/B000QFT1R2/"
   },
   {
     "name": "\"House Line\"",
-    "image": "https://m.media-amazon.com/images/I/61KpP8rUAGL._AC_SL1001_.jpg",
+    "image": "/img/equipment/puppy/house-line.jpg",
     "description": "Get a leash a cut the loop off at 2 or 3 feet. <a href=\"https://www.youtube.com/watch?v=45kdNR6nAOs\" target=\"_blank\" class=\"underline\">Here's a video on what a \"house line\" is all about.</a>",
     "link": "https://www.amazon.com/gp/product/B000H5B5IO/"
   },
   {
     "name": "Bitter Apple Spray",
-    "image": "https://m.media-amazon.com/images/I/71onCGQTLNL._AC_SL1500_.jpg",
+    "image": "/img/equipment/puppy/bitter-apple-spray.jpg",
     "description": "Save your chair legs during the teething phase and before their \"leave it\" is solid. If Amazon won't ship to your state try <a href=\"https://www.chewy.com/s?query=Bitter%20Spray\" target=\"_blank\" class=\"underline\">Chewy</a>.",
     "link": "https://www.amazon.com/gp/product/B08FRMMNYD/"
   },
   {
     "name": "Kong",
-    "image": "https://m.media-amazon.com/images/I/51tG8t6rqBL._AC_SL1000_.jpg",
+    "image": "/img/equipment/puppy/kong.jpg",
     "description": "Wipe some peanut butter on the inside and buy yourself 15 min of sanity. Red is the normal rubber. If they shred that one get the black one.",
     "link": "https://www.amazon.com/gp/product/B000GUDZO2/"
   },
   {
     "name": "Baby Gate / Playpen",
-    "image": "https://m.media-amazon.com/images/I/91oZl9WLYSL._AC_SL1500_.jpg",
+    "image": "/img/equipment/puppy/baby-gate-playpen.jpg",
     "description": "Very young puppies should have small play areas. More access to the house can be granted over time.",
     "link": "https://www.amazon.com/Regalo-192-Inch-Super-Adjustable-Mounts/dp/B003VNKLIY/"
   },
   {
     "name": "Kong \"Wobbler\"",
-    "image": "https://m.media-amazon.com/images/I/71FqN+vOcnL._AC_SL1500_.jpg",
+    "image": "/img/equipment/puppy/kong-wobbler.jpg",
     "description": "This is a large wobble toy that holds an entire meal of kibble. As the puppy bats it around, food drops out of the hole.",
     "link": "https://www.amazon.com/gp/product/B003ALMW0M/"
   },
   {
     "name": "Snuffle Mat",
-    "image": "https://m.media-amazon.com/images/I/91gP6YB8w7L._AC_SL1500_.jpg",
+    "image": "/img/equipment/puppy/snuffle-mat.jpg",
     "description": "Roll it out, sprinkle their kibble all inside of it, and let them use their nose to find their breakfast. A dog's brain sparkles when their nose is at work.",
     "link": "https://www.amazon.com/LIVEKEY-Snuffle-Nosework-Training-Activity/dp/B0C9QQ9PYT/"
   }

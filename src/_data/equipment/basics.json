@@ -1,77 +1,78 @@
 [
   {
     "name": "Collar",
-    "image": "https://m.media-amazon.com/images/I/71qJ5VqZ9RL._AC_SL1500_.jpg",
+    "image": "/img/equipment/basics/collar.png",
     "description": "A normal, flat-buckle collar. 1\" wide for large breeds, 3/4\" for small breeds. My favorites:\n• Leather + steel: <a href=\"https://www.hanksbelts.com/collections/dog-collars-and-leashes\" target=\"_blank\" class=\"underline\">Hank's Leather</a>\n• Leather + brass: <a href=\"https://www.mendotapet.com/collections/collars/products/mendota-chestnut-collars\" target=\"_blank\" class=\"underline\">Mendota</a>\n• All-weather & thin: <a href=\"https://www.amazon.com/dp/B07Q3GHHMF\" target=\"_blank\" class=\"underline\">Tuff Pupper</a>\n• All weather & thick: <a href=\"https://www.amazon.com/dp/B073RR7PM2\" target=\"_blank\" class=\"underline\">Regal</a>",
     "link": "https://www.mendotapet.com/collections/collars/products/mendota-chestnut-collars"
   },
   {
     "name": "Leash",
-    "image": "https://m.media-amazon.com/images/I/61KpP8rUAGL._AC_SL1001_.jpg",
+    "image": "/img/equipment/basics/leash.jpg",
     "description": "A 6 foot nylon leash that bends loosely and <strong>crumples easily in one hand</strong>. 3/4\" wide is great. We want a floppy, easily bending leash. Avoid thick, rigid rope leashes or leashes with bulky handles.",
     "link": "https://www.amazon.com/gp/product/B000H5B5IO/"
   },
   {
     "name": "Raised Platform",
-    "image": "https://m.media-amazon.com/images/I/81fTnpVSJxL._AC_SL1500_.jpg",
+    "image": "/img/equipment/basics/raised-platform.jpg",
     "description": "Measure first! If you have a small car trunk, consider <a href=\"https://www.amazon.com/gp/product/B07SN9ZGF3/\" target=\"_blank\" class=\"underline\">one that folds up</a>. If you get the Amazon brand and have wood floors get some <a href=\"https://www.amazon.com/gp/product/B000QD30TE/\" target=\"_blank\" class=\"underline\">rubber feet</a>.",
     "link": "https://www.amazon.com/gp/product/B076VSF333/"
   },
   {
     "name": "Treat Pouch",
-    "image": "https://m.media-amazon.com/images/I/71W8Eu4eKNL._AC_SL1500_.jpg",
+    "image": "/img/equipment/basics/treat-pouch.jpg",
     "description": "Get one that won't dangle in front of you when you bend over, isn't too deep for your fingers, and that is easily accessed with one hand. These washable <a href=\"https://www.amazon.com/AUDWUD-Silicone-Dog-Treat-Pouch/dp/B07WR9C96S/\" target=\"_blank\" class=\"underline\">silicone ones</a> also work well.",
     "link": "https://www.amazon.com/gp/product/B000274692/"
   },
   {
     "name": "Training Treats",
-    "image": "https://m.media-amazon.com/images/I/81MU+rxWD4L._SL1500_.jpg",
+    "image": "/img/equipment/basics/training-treats.jpg",
     "description": "When you can, use their kibble! When you can't, find a low calorie training treat that your dog likes. Costco sells these <a href=\"https://www.amazon.com/gp/product/B08ZMNR5DC/\" target=\"_blank\" class=\"underline\">dried beef liver</a> and <a href=\"https://www.amazon.com/Nutri-Bites-Protein-Premium-Quality/dp/B09WQ7FJP3/\" target=\"_blank\" class=\"underline\">dried salmon treats</a> on the cheap in the pet section.",
     "link": "https://www.amazon.com/stores/page/AE5F7C51-E46E-4E68-977C-CE67AFB270A1"
   },
   {
     "name": "High-Value Treats",
+    "image": "/img/equipment/basics/high-value-treats.png",
     "description": "Use something your dog <strong>LOVES</strong> to reward recall. Costco sells huge packs of string cheese that work great."
   },
   {
     "name": "Recall Whistle",
-    "image": "https://m.media-amazon.com/images/I/41J8xhQnHaL._AC_.jpg",
+    "image": "/img/equipment/basics/recall-whistle.jpg",
     "description": "A recall whistle has a specific frequency: <a href=\"https://www.amazon.com/acme-Model-Plastic-Whistle-Forest/dp/B07D33TGCD/\" target=\"_blank\" class=\"underline\">210.5</a> or <a href=\"https://www.amazon.com/gp/product/B00NWNFYPI/\" target=\"_blank\" class=\"underline\">211.5</a> and no \"pea\" like the whistles they use in sports. Grab a <a href=\"https://www.amazon.com/dp/B07C865C51/\" target=\"_blank\" class=\"underline\">lanyard</a> too.",
     "link": "https://www.amazon.com/gp/product/B00NWNFYPI/"
   },
   {
     "name": "Long Line",
-    "image": "https://m.media-amazon.com/images/I/71hh0PEqaYL._AC_SL1500_.jpg",
+    "image": "/img/equipment/basics/long-line.jpg",
     "description": "This is how we safely practice recall and other \"off leash\" skills. These rubber-coated vinyl straps are strong, easy to clean, and lightweight. <strong>50ft</strong> is a good length.",
     "link": "https://a.co/d/gIEzAqa"
   },
   {
     "name": "Long Line Tie Down",
-    "image": "https://m.media-amazon.com/images/I/51V5hE6yDPL._AC_SL1000_.jpg",
+    "image": "/img/equipment/basics/long-line-tie-down.png",
     "description": "When you're working with your dog on a long line, a tie down spike can add an extra element of safety at a park.",
     "link": "https://www.amazon.com/dp/B086WYFY43"
   },
   {
     "name": "Water Bowl (34oz)",
-    "image": "https://m.media-amazon.com/images/I/71KQNO9RrgL._AC_SL1500_.jpg",
+    "image": "/img/equipment/basics/water-bowl.png",
     "description": "This is in \"The Basics\" list because you need to bring water <em>everywhere</em> for your dog. Many of the ones on Amazon are deceptively small. Here's a link to some larger ones.",
     "link": "https://www.amazon.com/gp/product/B07FM224VC/"
   },
   {
     "name": "Ball-on-a-Rope",
-    "image": "https://foamdogballs.com/cdn/shop/files/classic-dog-training-ball-front.jpg?v=1692648413&width=1946",
+    "image": "/img/equipment/basics/ball-on-a-rope.png",
     "description": "AKA the \"crack ball.\" For high-drive dogs that could care less about treats, this is your reward system. The best (and cheapest) ones are from <a href=\"https://FoamDogBalls.com\" target=\"_blank\" class=\"underline\">FoamDogBalls.com</a>",
     "link": "https://foamdogballs.com/products/classic-dog-training-ball"
   },
   {
     "name": "Harness",
-    "image": "https://m.media-amazon.com/images/I/81VcZfC9i0L._AC_SL1500_.jpg",
+    "image": "/img/equipment/basics/harness.jpg",
     "description": "One that gives full range of front legs without rubbing. Favorites:\n• <a href=\"https://www.amazon.com/dp/B08H5XCK57/\" target=\"_blank\" class=\"underline\">Hurtta Y-Harness</a> (by far).\n• <a href=\"https://ruffwear.com/products/front-range-everyday-dog-harness\" target=\"_blank\" class=\"underline\">RuffWear Front Range</a>\n• <a href=\"https://www.wilderdog.com/products/harness\" target=\"_blank\" class=\"underline\">Wilderdog</a>",
     "link": "https://www.amazon.com/dp/B08H5XCK57/"
   },
   {
     "name": "Avoid \"step-in\" style harnesses",
-    "image": "https://m.media-amazon.com/images/I/71nY9mxjXgL._AC_SL1500_.jpg",
+    "image": "/img/equipment/basics/avoid-step-in-harness.png",
     "description": "Harnesses that connect with a single strap above the shoulder blades tend to restrict natural leg movement. Imagine a backpack that squeezed the side of your shoulder (where your arm rotates) and had a strap cutting through your arm pit. Instead, look for a harness that extends down the spine at least a little to ensure those front legs can slide freely alongside the body. I recommend watching <a href=\"https://www.youtube.com/watch?v=C8W1nPXLMFE\" target=\"_blank\" class=\"underline\"><strong>this excellent video</strong></a> about dog anatomy and harnesses."
   }
 ]
