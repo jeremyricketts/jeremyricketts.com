@@ -49,11 +49,10 @@ permalink: /equipment/
         <!-- Harness warning - full width banner -->
         <div class="harness-warning">
           <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" alt="Warning" class="harness-warning-icon">
-          {% if item.image %}
           <div class="harness-warning-images">
-            <img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+            <img src="/img/equipment/basics/harness-bad-fit-1.png" alt="Bad harness fit - strap on front leg socket" loading="lazy">
+            <img src="/img/equipment/basics/harness-bad-fit-2.png" alt="Good harness fit - front legs slide freely" loading="lazy">
           </div>
-          {% endif %}
           <h3>{{ item.name }}</h3>
           <p>{{ item.description | safe }}</p>
         </div>
