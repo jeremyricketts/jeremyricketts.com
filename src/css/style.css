@@ -257,6 +257,13 @@ body:has(.lesson-masthead) {
   padding: 0 1rem;
 }
 
+.section-icon {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1rem;
+}
+
 .homework-section h2 {
   font-size: 1.875rem;
   font-weight: 700;
@@ -311,6 +318,15 @@ body:has(.lesson-masthead) {
   margin-bottom: 0.75rem;
 }
 
+.bigger-picture ul {
+  list-style-position: outside;
+  margin-left: 1.5rem;
+}
+
+.bigger-picture li {
+  margin-bottom: 0.5rem;
+}
+
 /* Blue info callout box */
 .info-box {
   background-color: #d1f1ff;
@@ -328,7 +344,8 @@ body:has(.lesson-masthead) {
 
 .info-box ul {
   list-style-type: disc;
-  list-style-position: inside;
+  list-style-position: outside;
+  margin-left: 1.5rem;
 }
 
 .info-box ul li {
