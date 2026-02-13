@@ -72,7 +72,7 @@
 }
 
 .tips-box ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .exercise-section {
@@ -100,7 +100,7 @@
 }
 
 .exercise-section li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .exercise-section ol {
@@ -278,6 +278,15 @@ body:has(.lesson-masthead) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.homework-section ol,
+.homework-section ul {
+  margin-left: 1.5rem;
+}
+
+.homework-section li {
+  margin-bottom: 1rem;
+}
+
 /* Bigger Picture section with background image */
 .bigger-picture {
   margin: 0;
@@ -324,7 +333,7 @@ body:has(.lesson-masthead) {
 }
 
 .bigger-picture li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Blue info callout box */
@@ -349,7 +358,7 @@ body:has(.lesson-masthead) {
 }
 
 .info-box ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Yellow warning box */
