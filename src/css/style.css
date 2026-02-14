@@ -20,6 +20,18 @@
   --breakpoint-lg: 1200px;
 }
 
+/* Body text link defaults */
+main p a,
+main li a {
+  color: #0099FF;
+  text-decoration: underline;
+}
+
+.homework-section p a,
+.homework-section li a {
+  color: white;
+}
+
 /* Custom component classes */
 
 .btn-primary {
@@ -52,27 +64,40 @@
 
 .tips-box {
   background-color: var(--color-tips-yellow);
-  border-left: 4px solid var(--color-accent-green);
-  padding: 2rem 2.5rem;
-  margin: 2.5rem 0 1.5rem;
+  border: none;
+  padding: 2.5rem 3.125rem 1.5rem 2.5rem;
+  margin: 2.5rem auto 1.5rem;
+  max-width: 43rem;
   border-radius: 0.25rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.18) 0px 0.6px 0.6px -1.25px,
+    rgba(0, 0, 0, 0.16) 0px 2.3px 2.3px -2.5px,
+    rgba(0, 0, 0, 0.063) 0px 10px 10px -3.75px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .tips-box h3 {
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
-  color: var(--color-dark-gray);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.25rem;
+  color: #928416;
+  text-align: center;
 }
 
-.tips-box ul {
+.lesson-article .tips-box ul {
   list-style-type: none;
+  list-style-position: outside;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .tips-box ul li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  color: #928416;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 .exercise-section {
@@ -96,7 +121,8 @@
 
 .exercise-section ol,
 .exercise-section ul {
-  margin-left: 1.5rem;
+  list-style-position: outside;
+  padding-left: 1.5rem;
 }
 
 .exercise-section li {
@@ -171,10 +197,45 @@ body:has(.lesson-masthead) {
   padding-right: 1rem;
 }
 
-.lesson-article > .info-box:not(.lesson-full-width),
-.lesson-article > .tips-box:not(.lesson-full-width) {
+.lesson-article > .info-box:not(.lesson-full-width) {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.lesson-article > .tips-box:not(.lesson-full-width):not(.lesson-intro) {
+  max-width: 43rem;
+  padding: 2.5rem 3.125rem 1.5rem 2.5rem;
+}
+
+.lesson-article > ol:not(.lesson-full-width):not(.lesson-intro),
+.lesson-article > ul:not(.lesson-full-width):not(.lesson-intro) {
+  padding-left: 2.5rem;
+}
+
+/* List styles for lesson body content */
+.lesson-article ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
+.lesson-article ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
+.lesson-article li {
+  margin-bottom: 0.5rem;
+}
+
+/* Subheadings in lesson body content */
+.lesson-article > h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Spacing between paragraphs and before lists in lesson body */
@@ -278,9 +339,16 @@ body:has(.lesson-masthead) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.homework-section ol,
+.homework-section ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
 .homework-section ul {
-  margin-left: 1.5rem;
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
 }
 
 .homework-section li {
@@ -327,9 +395,16 @@ body:has(.lesson-masthead) {
   margin-bottom: 0.75rem;
 }
 
-.bigger-picture ul {
+.bigger-picture ol {
+  list-style-type: decimal;
   list-style-position: outside;
-  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.bigger-picture ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
 }
 
 .bigger-picture li {
@@ -354,7 +429,7 @@ body:has(.lesson-masthead) {
 .info-box ul {
   list-style-type: disc;
   list-style-position: outside;
-  margin-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .info-box ul li {
@@ -465,10 +540,9 @@ body:has(.lesson-masthead) {
 .learn-heading {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-exercise-green);
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  color: #1199EE;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Colored marker labels */
