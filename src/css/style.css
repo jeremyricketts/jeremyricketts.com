@@ -63,6 +63,7 @@ main li a {
 }
 
 .tips-box {
+  clear: both;
   background-color: var(--color-tips-yellow);
   border: none;
   padding: 2.5rem 3.125rem 1.5rem 2.5rem;
@@ -117,6 +118,14 @@ main li a {
   font-weight: 700;
   color: var(--color-exercise-green);
   margin-bottom: 1rem;
+}
+
+.exercise-section h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .exercise-section ol,
@@ -274,6 +283,15 @@ body:has(.lesson-masthead) {
   .lesson-intro-image {
     flex: 2;
   }
+}
+
+.lesson-intro-text {
+  font-family: Sriracha, cursive;
+}
+
+.lesson-intro-text a {
+  color: #476237;
+  text-decoration: underline;
 }
 
 .lesson-intro-image img {
@@ -436,6 +454,83 @@ body:has(.lesson-masthead) {
   margin-bottom: 1rem;
 }
 
+/* Leash Rules section (L6) - two-column layout with illustrations */
+.leash-rules-section {
+  background-color: #e9e9e9;
+  padding: 2.5rem 2rem;
+  border-radius: 0.5rem;
+  margin: 2.5rem 0 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.leash-rules-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.leash-rules-title {
+  font-family: 'Jua', sans-serif;
+  font-size: 1.625rem;
+  color: #333;
+  margin: 0;
+}
+
+.leash-rules-subtitle {
+  font-family: 'Jua', sans-serif;
+  font-size: 1.625rem;
+  color: #333;
+  margin: 0;
+}
+
+.leash-rules-col-illustration {
+  max-width: 280px;
+  margin: 0 auto 1rem;
+}
+
+.leash-rules-col-illustration img {
+  width: 100%;
+}
+
+.leash-rules-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 0 4rem
+}
+
+.leash-rules-col:last-child {
+  padding-top: 2rem;
+}
+
+@media (max-width: 810px) {
+  .leash-rules-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leash-rules-col ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.25rem;
+}
+
+.leash-rules-col li {
+  margin-bottom: 0.75rem;
+}
+
+.leash-rules-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.text-red {
+  color: rgb(238, 68, 68);
+}
+
+.text-green {
+  color: rgb(102, 187, 102);
+}
+
 /* Yellow warning box */
 .warning-box {
   background-color: #fff3cd;
@@ -464,24 +559,42 @@ body:has(.lesson-masthead) {
   padding: 0 1rem;
 }
 
-/* Dark comparison box (L6) */
-.comparison-box {
-  background-color: #444;
-  color: white;
-  padding: 2rem;
+/* Lesson prerequisites section with background image (L6) */
+.lesson-prereqs {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1.5rem 0;
   border-radius: 0.5rem;
-  margin: 2.5rem 0 1.5rem;
+  overflow: hidden;
 }
 
-.comparison-box h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.lesson-prereqs-overlay {
+  background-color: rgba(50, 50, 50, 0.65);
+  padding: 1.5rem 2rem;
+  color: white;
+  font-weight: 600;
 }
 
-.comparison-box img {
-  width: 100%;
-  border-radius: 0.25rem;
+.lesson-prereqs p,
+.lesson-prereqs li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.lesson-prereqs ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lesson-prereqs li {
+  margin-bottom: 0.25rem;
+}
+
+.lesson-prereqs a {
+  color: #66bbff;
+  text-decoration: underline;
 }
 
 /* Inline content images */
@@ -506,23 +619,113 @@ body:has(.lesson-masthead) {
   display: block;
 }
 
-/* Pavlov portrait with golden glow */
+/* Pavlov portrait — polaroid style */
 .pavlov-portrait {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin-top: 2rem;
 }
 
-.pavlov-portrait img {
-  width: 180px;
-  border-radius: 50%;
-  box-shadow: 0 0 40px 15px rgba(200, 170, 80, 0.4);
+.pavlov-portrait-inner {
+  display: inline-block;
+  width: 210px;
+  padding: 10px 10px 1rem;
+  background: radial-gradient(50% 50%, rgb(250, 225, 163) 0%, rgb(255, 255, 255) 100%);
+  transform: rotate(-6deg);
+  box-shadow:
+    0 1px 1px rgba(0,0,0,0.15),
+    0 4px 8px rgba(0,0,0,0.12),
+    0 10px 20px rgba(0,0,0,0.08);
 }
 
-.pavlov-portrait p {
-  margin-top: 0.75rem;
-  font-size: 0.875rem;
-  color: #666;
-  font-style: italic;
+.pavlov-portrait-inner img {
+  width: 100%;
+  display: block;
+}
+
+.pavlov-portrait-inner p {
+  margin-top: 0.5rem;
+  font-family: Sriracha, cursive;
+  font-size: 0.8rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.pavlov-portrait-inner a {
+  color: #476237;
+}
+
+/* Text with polaroid wrapper */
+.text-with-polaroid::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Polaroid-style float right image */
+.polaroid-float-right {
+  float: right;
+  margin: 1rem 0 1rem 1.5rem;
+  padding: 8px;
+  width: 240px;
+  background: radial-gradient(50% 50%, rgb(250, 225, 163) 0%, rgb(255, 255, 255) 100%);
+  transform: rotate(8deg);
+  box-shadow:
+    0 1px 1px rgba(0,0,0,0.15),
+    0 4px 8px rgba(0,0,0,0.12),
+    0 10px 20px rgba(0,0,0,0.08);
+}
+
+.polaroid-float-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 810px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+/* Bigger picture circular portrait */
+.bigger-picture-portrait {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.bigger-picture-portrait-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bigger-picture-portrait-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Basketball emoji circle (lesson 2) */
+.basketball-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(277deg, rgb(12, 153, 172) 0%, rgb(31, 165, 255) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-6deg);
+}
+
+.basketball-circle img {
+  width: 70%;
+  height: 70%;
 }
 
 /* Lesson diagram (centered, full content width) */
@@ -532,8 +735,9 @@ body:has(.lesson-masthead) {
 }
 
 .lesson-diagram img {
-  max-width: 100%;
+  max-width: 85%;
   height: auto;
+  margin: 0 auto;
 }
 
 /* Learn section heading */

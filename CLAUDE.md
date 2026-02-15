@@ -107,7 +107,7 @@ npm run build
 **Checking your changes**: When changes are made to the design, use the Chrome DevTools MCP to check your work and follow these steps:
 1. Make the code change
 2. Take a screenshot using the MCP (always use `format: "jpeg"` to keep file sizes small)
-3. Inspect the screenshot and evaluate whether the change was successful
+3. **After taking a screenshot, you MUST explicitly describe what you see and evaluate whether it matches the target. List any remaining discrepancies before moving on. Never take a screenshot and immediately proceed to cleanup or declare the task done.**
 
 ### Deployment
 
