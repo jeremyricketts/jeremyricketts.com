@@ -728,16 +728,22 @@ body:has(.lesson-masthead) {
   height: 70%;
 }
 
-/* Lesson diagram (centered, full content width) */
+/* Lesson diagram (full viewport width, edge to edge) */
 .lesson-diagram {
   margin: 2rem 0;
   text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: none;
+  padding: 0;
 }
 
 .lesson-diagram img {
-  max-width: 85%;
+  width: 100%;
   height: auto;
-  margin: 0 auto;
+  display: block;
 }
 
 /* Learn section heading */
